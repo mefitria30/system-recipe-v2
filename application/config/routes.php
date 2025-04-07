@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['default_controller'] = 'recipes'; // Default ke halaman form
 $route['recipes/process'] = 'recipes/process'; // Routing untuk submit form
+
+$route['recipes/update'] = 'recipes/update_recommendations';

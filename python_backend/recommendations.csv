@@ -1,0 +1,76 @@
+id,recipe_name,category,main_ingredient,rating,cluster,Cluster
+1.0,Nasi Goreng,Asian,Nasi,4.5,1,2
+2.0,Spaghetti Carbonara,Italian,Pasta,4.3,1,2
+3.0,Pizza Margherita,Italian,Tepung,4.7,2,1
+4.0,Sushi Roll,Japanese,Ikan,4.8,1,1
+5.0,Rendang Padang,Asian,Daging,4.9,3,2
+6.0,Beef Burger,Western,Daging,4.2,2,1
+7.0,Caesar Salad,Western,Sayur,4.1,1,0
+8.0,Sate Ayam,Asian,Ayam,4.6,3,0
+9.0,Mie Goreng Jawa,Asian,Mie,4.4,2,2
+10.0,Tacos Beef,Mexican,Tortilla,4.0,1,0
+11.0,Nachos Deluxe,Mexican,Tortilla,4.3,2,0
+12.0,Donat Gula,Dessert,Tepung,4.2,3,2
+13.0,Pancake Coklat,Dessert,Tepung,4.6,1,2
+14.0,Nasi Biryani,Asian,Nasi,4.5,2,0
+15.0,Lasagna Classic,Italian,Pasta,4.4,2,2
+16.0,Ramen Tonkotsu,Japanese,Mie,4.7,1,1
+17.0,Tiramisu,Dessert,Tepung,4.8,2,2
+18.0,Hotdog,Western,Daging,4.0,3,0
+19.0,Greek Salad,Western,Sayur,4.1,2,2
+20.0,Chicken Curry,Asian,Ayam,4.7,1,1
+21.0,Pad Thai,Asian,Mie,4.6,1,1
+22.0,Burrito Chicken,Mexican,Tortilla,4.3,1,2
+23.0,Churros,Dessert,Tepung,4.4,2,2
+24.0,Brownies,Dessert,Tepung,4.5,3,1
+25.0,Fried Rice Special,Asian,Nasi,4.5,1,1
+26.0,Fettuccine Alfredo,Italian,Pasta,4.4,2,2
+27.0,Tempura Ebi,Japanese,Ikan,4.7,3,1
+28.0,Beef Stew,Western,Daging,4.2,2,1
+29.0,Veggie Salad,Western,Sayur,4.0,3,0
+30.0,Chicken Satay,Asian,Ayam,4.9,2,0
+31.0,Lo Mein,Asian,Mie,4.6,1,2
+32.0,Quesadilla,Mexican,Tortilla,4.2,2,0
+33.0,Cheesecake,Dessert,Tepung,4.8,3,1
+34.0,Chocolate Muffin,Dessert,Tepung,4.7,1,2
+35.0,Risotto,Italian,Nasi,4.3,2,0
+36.0,Penne Arrabiata,Italian,Pasta,4.6,2,2
+37.0,Sashimi Tuna,Japanese,Ikan,4.9,1,1
+38.0,Meatloaf,Western,Daging,4.2,3,1
+39.0,Coleslaw,Western,Sayur,4.0,2,1
+40.0,Chicken Biryani,Asian,Ayam,4.7,3,2
+41.0,Veggie Burrito,Mexican,Sayur,4.2,2,1
+42.0,Chocolate Cake,Dessert,Tepung,4.8,3,0
+43.0,French Toast,Dessert,Tepung,4.5,1,0
+44.0,Gyoza,Japanese,Daging,4.7,3,0
+45.0,Peking Duck,Asian,Ayam,4.9,2,2
+46.0,Chicken Parmesan,Italian,Ayam,4.8,1,0
+47.0,Beef Wellington,Western,Daging,4.7,3,1
+48.0,Clam Chowder,Western,Seafood,4.5,2,0
+49.0,Seafood Paella,Spanish,Seafood,4.9,3,1
+50.0,Shrimp Tempura,Japanese,Seafood,4.8,1,1
+,Migas,Miscellaneous,API,4.772118231037664,,2
+,Sushi,Seafood,API,2.732401399223248,,1
+,Burek,Side,API,1.39901718722367,,1
+,Corba,Side,API,1.4860302959525558,,1
+,Kumpir,Side,API,3.4455246604829197,,1
+,Tamiya,Vegetarian,API,2.1575371267887666,,1
+,Bistek,Beef,API,3.631973908813322,,1
+,Wontons,Pork,API,3.3838807782853935,,1
+,Kafteji,Vegetarian,API,1.9396858180954846,,1
+,Big Mac,Beef,API,3.608099152198985,,1
+,Lasagne,Pasta,API,2.9465749569969937,,2
+,Timbits,Dessert,API,3.2781050533755325,,1
+,Dal fry,Vegetarian,API,3.248349181847881,,2
+,Koshari,Vegetarian,API,2.7057425141150317,,2
+,Poutine,Miscellaneous,API,4.595648129360176,,2
+,Pancakes,Dessert,API,3.351460185497478,,1
+,Kapsalon,Lamb,API,2.292587866262602,,2
+,Moussaka,Beef,API,2.4375399337259465,,2
+,Shawarma,Chicken,API,4.5457288577776644,,1
+,Fish pie,Seafood,API,2.1795893278151297,,2
+,Stamppot,Pork,API,2.471680071032248,,1
+,Flamiche,Vegetarian,API,4.356058788837183,,1
+,Kedgeree,Seafood,API,1.8630139275524908,,1
+,Ribollita,Vegetarian,API,4.13712194875296,,2
+,Roti john,Beef,API,1.7070560068740939,,2

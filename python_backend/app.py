@@ -1,20 +1,17 @@
-from flask import Flask, jsonify
-from sklearn.cluster import KMeans
-from numpy.linalg import svd
 import pymysql
 import pandas as pd
 import numpy as np
+from sklearn.cluster import KMeans
+from numpy.linalg import svd
 import requests
-
-app = Flask(__name__)
 
 # Fungsi untuk mengambil data dari database MySQL
 def fetch_data_from_db():
     connection = pymysql.connect(
         host='localhost',
         user='root',
-        password='',  # Ganti sesuai konfigurasi
-        database='system_recipe_v2'
+        password='',  # Sesuaikan dengan password MySQL Anda
+        database='db-system-recipe-v2'
     )
     query = "SELECT * FROM recipes"
     data = pd.read_sql(query, connection)
@@ -38,25 +35,29 @@ def fetch_meal_db():
         return pd.DataFrame(api_data)
     return pd.DataFrame()
 
-# Endpoint rekomendasi
-@app.route('/recommendations', methods=['GET'])
-def get_recommendations():
-    # Ambil data dari database dan API
+# Fungsi utama untuk menghasilkan rekomendasi
+def generate_recommendations():
+    # Gabungkan data dari database dan API
     db_data = fetch_data_from_db()
     api_data = fetch_meal_db()
     combined_data = pd.concat([db_data, api_data], ignore_index=True)
 
     # Algoritma K-Means dan SVD
-    ratings = np.random.rand(len(combined_data), 5)  # Dummy matrix rating
+    ratings = np.random.rand(len(combined_data), len(combined_data))  # Square matrix
     U, S, VT = svd(ratings)
-    predicted = np.dot(U, np.dot(np.diag(S), VT))
 
-    # K-Means clustering
+    # Adjust matrix multiplication for alignment
+    predicted = np.dot(U, np.dot(np.diag(S[:len(U)]), VT[:len(U), :]))
+
+    # Apply K-Means clustering
     kmeans = KMeans(n_clusters=3, random_state=0).fit(predicted)
     combined_data['Cluster'] = kmeans.labels_
 
-    # Return data sebagai JSON
-    return jsonify(combined_data.to_dict(orient='records'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    # Simpan hasil ke file CSV
+    combined_data.to_csv("recommendations.csv", index=False)
+    print("Data rekomendasi telah disimpan ke 'recommendations.csv'")
+
+# Eksekusi script
+if __name__ == "__main__":
+    generate_recommendations()

@@ -12,6 +12,24 @@
 
 <body>
     <div class="container">
+        <div class="container">
+            <!-- Tambahkan Alert untuk Feedback -->
+            <?php if ($this->session->flashdata('success')): ?>
+            <div class="alert alert-success"><?= $this->session->flashdata('success') ?></div>
+            <?php elseif ($this->session->flashdata('error')): ?>
+            <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>
+            <?php endif; ?>
+
+            <div class="text-right mb-4">
+                <!-- Tombol Update -->
+                <a href="/system-recipe-v2/recipes/update" class="btn btn-primary">
+                    Update Rekomendasi
+                </a>
+            </div>
+
+            <!-- Sisa kode untuk menampilkan data -->
+        </div>
+
         <h1 class="mt-4 text-center">Rekomendasi Resep</h1>
 
         <!-- Form untuk Input Preferensi Pengguna -->
@@ -20,10 +38,14 @@
                 <div class="form-group col-md-6">
                     <label for="category">Pilih Kategori:</label>
                     <select class="form-control" id="category" name="category">
-                        <option value="all">Semua</option>
+                        <option value="all"
+                            <?= isset($_POST['category']) && $_POST['category'] == 'all' ? 'selected' : '' ?>>Semua
+                        </option>
                         <?php if (!empty($categories)): ?>
                         <?php foreach ($categories as $category): ?>
-                        <option value="<?= $category ?>"><?= $category ?></option>
+                        <option value="<?= $category ?>"
+                            <?= isset($_POST['category']) && $_POST['category'] == $category ? 'selected' : '' ?>>
+                            <?= $category ?></option>
                         <?php endforeach; ?>
                         <?php endif; ?>
                     </select>
@@ -32,12 +54,14 @@
                 <div class="form-group col-md-6">
                     <label for="rating">Rating Minimal:</label>
                     <input type="number" class="form-control" id="rating" name="rating" min="0" max="5" step="0.1"
-                        placeholder="Masukkan rating (0-5)">
+                        placeholder="Masukkan rating (0-5)"
+                        value="<?= isset($_POST['rating']) ? $_POST['rating'] : '' ?>">
                 </div>
             </div>
 
             <button type="submit" class="btn btn-primary btn-block">Cari Rekomendasi</button>
         </form>
+
 
         <!-- Hasil Rekomendasi -->
         <div class="mt-5">

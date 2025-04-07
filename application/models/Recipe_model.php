@@ -28,10 +28,38 @@ class Recipe_model extends CI_Model {
 
     
     public function get_combined_data() {
+        // Ambil data dari API
+        $api_recipes = $this->fetch_meal_db(); // Data dari API
+
+        // Ambil data dari database
         $local_recipes = $this->get_all_recipes(); // Data dari database
-        $api_recipes = $this->fetch_meal_db();     // Data dari API
-        return array_merge($local_recipes, $api_recipes); // Gabungkan data
+
+        // Ambil data dari file CSV
+        $file = fopen('python_backend/recommendations.csv', 'r');
+        $csv_recipes = [];
+        $header = fgetcsv($file);
+        while (($data = fgetcsv($file)) !== FALSE) {
+            $csv_recipes[] = array_combine($header, $data);
+        }
+        fclose($file);
+
+        // Gabungkan data dengan prioritas API
+        $combined_data = array_merge($api_recipes, $local_recipes, $csv_recipes);
+
+        // Hapus duplikasi berdasarkan nama resep
+        $unique_data = [];
+        foreach ($combined_data as $recipe) {
+            $unique_key = $recipe['recipe_name']; // Prioritaskan resep berdasarkan nama
+            if (!isset($unique_data[$unique_key])) {
+                $unique_data[$unique_key] = $recipe; // Masukkan resep jika belum ada
+            }
+        }
+
+        return array_values($unique_data); // Kembalikan data tanpa duplikasi
     }
+
+
+
 
     public function get_all_categories() {
         // Ambil kategori dari database

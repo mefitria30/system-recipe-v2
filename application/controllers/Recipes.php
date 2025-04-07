@@ -3,17 +3,18 @@ class Recipes extends CI_Controller {
     public function index() {
         $this->load->model('Recipe_model'); // Load model Recipe_model
 
-        // Ambil semua data resep gabungan (API + database lokal)
+        // Ambil data yang mencakup database, API, dan rekomendasi CSV
         $recipes = $this->Recipe_model->get_combined_data();
 
         // Ambil daftar kategori untuk dropdown
         $categories = $this->Recipe_model->get_all_categories();
 
         // Kirim data ke view
-        $data['recipes'] = $recipes; // Data resep
-        $data['categories'] = $categories; // Data kategori untuk dropdown
+        $data['recipes'] = $recipes;
+        $data['categories'] = $categories;
         $this->load->view('recipes_view', $data);
     }
+
 
     public function process() {
         $this->load->model('Recipe_model'); // Load model Recipe_model
@@ -40,5 +41,30 @@ class Recipes extends CI_Controller {
         $data['categories'] = $categories; // Dropdown kategori
         $this->load->view('recipes_view', $data);
     }
+
+    public function update_recommendations() {
+        $output = [];
+        $return_var = 0;
+
+        // Replace with the actual path to your Python executable
+        $command = escapeshellcmd('C:/Python310/python.exe C:/xampp/htdocs/system-recipe-v2/python_backend/app.py');
+        exec($command . ' 2>&1', $output, $return_var);
+
+        // Log output for debugging
+        error_log('Command executed: ' . $command);
+        error_log('Output Python: ' . print_r($output, true));
+        error_log('Return var: ' . $return_var);
+
+        // Check success or error
+        if ($return_var === 0) {
+            $this->session->set_flashdata('success', 'Data rekomendasi berhasil diperbarui!');
+        } else {
+            $this->session->set_flashdata('error', 'Terjadi kesalahan saat memperbarui data rekomendasi: ' . implode('<br>', $output));
+        }
+
+        redirect(base_url());
+    }
+
+
 }
 ?>
