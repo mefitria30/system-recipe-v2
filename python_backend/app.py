@@ -10,19 +10,44 @@ def fetch_data_from_db():
     connection = pymysql.connect(
         host='localhost',
         user='root',
-        password='',  # Sesuaikan dengan password MySQL Anda
+        password='',  # Your MySQL password
         database='db-system-recipe-v2'
     )
-    query = "SELECT * FROM recipes"
-    data = pd.read_sql(query, connection)
     
-    # Tambahkan jalur gambar lokal atau gunakan gambar default dari Wikipedia
-    data['image'] = data['image_name'].apply(
+    query = "SELECT * FROM recipes"
+    local_data = pd.read_sql(query, connection)
+
+    api_url = "https://www.themealdb.com/api/json/v1/1/search.php?s="
+    
+    # Enrich missing fields
+    for index, recipe in local_data.iterrows():
+        if pd.isnull(recipe['category']) or pd.isnull(recipe['main_ingredient']) or pd.isnull(recipe['description']):
+            response = requests.get(api_url + recipe['recipe_name'])
+            if response.status_code == 200:
+                api_data = response.json().get('meals', [])
+                if api_data:
+                    meal = api_data[0]
+                    # Update missing fields
+                    cursor = connection.cursor()
+                    update_query = """
+                    UPDATE recipes SET category=%s, main_ingredient=%s, description=%s WHERE id=%s
+                    """
+                    cursor.execute(update_query, (
+                        meal.get('strCategory', 'Miscellaneous'),
+                        meal.get('strIngredient1', 'Unknown'),
+                        meal.get('strInstructions', 'Deskripsi tidak tersedia.'),
+                        recipe['id']
+                    ))
+                    connection.commit()
+
+    # Fetch updated data
+    updated_data = pd.read_sql(query, connection)
+    updated_data['image'] = updated_data['image_name'].apply(
         lambda x: f"assets/images/recipes/{x}" if pd.notnull(x) else "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
     )
     
     connection.close()
-    return data
+    return updated_data
 
 
 # Fungsi untuk mengambil data dari API Meal DB

@@ -5,17 +5,13 @@ class Recipe_model extends CI_Model {
         $recipes = $query->result_array();
 
         foreach ($recipes as &$recipe) {
-            // Build full image path or fallback to default image
             $recipe['image'] = !empty($recipe['image_name']) 
                 ? base_url('assets/images/recipes/' . $recipe['image_name']) 
                 : 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg';
-
         }
 
-        return $recipes;
+        return $recipes;  // Ensure enriched data includes new fields like 'description'
     }
-
-
 
     public function fetch_meal_db() {
         $api_url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
