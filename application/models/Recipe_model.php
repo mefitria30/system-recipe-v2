@@ -17,7 +17,7 @@ class Recipe_model extends CI_Model {
         foreach ($recipes as &$recipe) {
             $recipe['image'] = !empty($recipe['image_name']) 
                 ? base_url('assets/images/recipes/' . $recipe['image_name']) 
-                : 'assets/images/no_image_available.svg';
+                : base_url('assets/images/no_image_available.svg');
         }
 
         return $recipes;  // Ensure enriched data includes new fields like 'description'
@@ -43,7 +43,7 @@ class Recipe_model extends CI_Model {
                             'main_ingredient' => $meal['strIngredient1'] ?? 'Unknown',
                             'rating' => rand(1, 5),
                             'description' => $meal['strInstructions'] ?? 'Deskripsi tidak tersedia.',
-                            'image' => $meal['strMealThumb'] ?? 'assets/images/no_image_available.svg',
+                            'image' => $meal['strMealThumb'] ?? base_url('assets/images/no_image_available.svg'),
                         ];
                     }
                 }
