@@ -1,8 +1,6 @@
 import pymysql
 import pandas as pd
 import numpy as np
-from sklearn.cluster import KMeans
-from numpy.linalg import svd
 import requests
 
 # Fungsi untuk mengambil data dari database MySQL
@@ -43,9 +41,9 @@ def fetch_data_from_db():
     # Fetch updated data
     updated_data = pd.read_sql(query, connection)
     updated_data['image'] = updated_data['image_name'].apply(
-        lambda x: f"assets/images/recipes/{x}" if pd.notnull(x) else "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+        lambda x: f"assets/images/recipes/{x}" if pd.notnull(x) else "assets/images/no_image_available.svg"
     )
-    
+
     connection.close()
     return updated_data
 

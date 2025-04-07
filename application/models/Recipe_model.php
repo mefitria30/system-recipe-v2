@@ -1,5 +1,15 @@
 <?php
 class Recipe_model extends CI_Model {
+    private function is_connected() {
+        $connected = @fsockopen("www.google.com", 80); // Coba koneksi ke Google
+        if ($connected) {
+            fclose($connected);
+            return true; // Koneksi tersedia
+        }
+        return false; // Koneksi tidak tersedia
+    }
+
+
     public function get_all_recipes() {
         $query = $this->db->get('recipes');
         $recipes = $query->result_array();
@@ -7,7 +17,7 @@ class Recipe_model extends CI_Model {
         foreach ($recipes as &$recipe) {
             $recipe['image'] = !empty($recipe['image_name']) 
                 ? base_url('assets/images/recipes/' . $recipe['image_name']) 
-                : 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg';
+                : 'assets/images/no_image_available.svg';
         }
 
         return $recipes;  // Ensure enriched data includes new fields like 'description'
@@ -15,34 +25,46 @@ class Recipe_model extends CI_Model {
 
     public function fetch_meal_db() {
         $api_url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
-        $response = file_get_contents($api_url);
-        $data = json_decode($response, true);
 
-        $api_recipes = [];
-        if (!empty($data['meals'])) {
-            foreach ($data['meals'] as $meal) {
-                $api_recipes[] = [
-                    'recipe_name' => $meal['strMeal'],
-                    'category' => $meal['strCategory'],
-                    'main_ingredient' => !empty($meal['strIngredient1']) ? $meal['strIngredient1'] : $meal['strCategory'], // Gunakan kategori jika bahan utama kosong
-                    'rating' => rand(1, 5), // Random rating
-                    'description' => !empty($meal['strInstructions']) ? $meal['strInstructions'] : 'Deskripsi tidak tersedia.',
-                    'image' => !empty($meal['strMealThumb']) ? $meal['strMealThumb'] : 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg',
-                ];
+        if ($this->is_connected()) {
+            try {
+                $response = file_get_contents($api_url);
+                if ($response === FALSE) {
+                    throw new Exception("API not accessible.");
+                }
+                $data = json_decode($response, true);
+
+                $api_recipes = [];
+                if (!empty($data['meals'])) {
+                    foreach ($data['meals'] as $meal) {
+                        $api_recipes[] = [
+                            'recipe_name' => $meal['strMeal'],
+                            'category' => $meal['strCategory'],
+                            'main_ingredient' => $meal['strIngredient1'] ?? 'Unknown',
+                            'rating' => rand(1, 5),
+                            'description' => $meal['strInstructions'] ?? 'Deskripsi tidak tersedia.',
+                            'image' => $meal['strMealThumb'] ?? 'assets/images/no_image_available.svg',
+                        ];
+                    }
+                }
+                return $api_recipes;
+
+            } catch (Exception $e) {
+                error_log("Error accessing API: " . $e->getMessage());
+                return [];
             }
+        } else {
+            error_log("No internet connection. Using local data only.");
+            return []; // Data kosong saat offline
         }
-        return $api_recipes;
     }
+
 
     
     public function get_combined_data() {
-        // Ambil data dari API
-        $api_recipes = $this->fetch_meal_db(); // Data dari API
+        $local_recipes = $this->get_all_recipes(); // Data lokal
+        $api_recipes = $this->fetch_meal_db();    // Data API (atau kosong jika offline)
 
-        // Ambil data dari database
-        $local_recipes = $this->get_all_recipes(); // Data dari database
-
-        // Ambil data dari file CSV
         $file = fopen('python_backend/recommendations.csv', 'r');
         $csv_recipes = [];
         $header = fgetcsv($file);
@@ -51,23 +73,18 @@ class Recipe_model extends CI_Model {
         }
         fclose($file);
 
-        // Gabungkan data dengan prioritas API
         $combined_data = array_merge($api_recipes, $local_recipes, $csv_recipes);
 
-        // Hapus duplikasi berdasarkan nama resep
         $unique_data = [];
         foreach ($combined_data as $recipe) {
-            $unique_key = $recipe['recipe_name']; // Prioritaskan resep berdasarkan nama
+            $unique_key = $recipe['recipe_name'];
             if (!isset($unique_data[$unique_key])) {
-                $unique_data[$unique_key] = $recipe; // Masukkan resep jika belum ada
+                $unique_data[$unique_key] = $recipe;
             }
         }
 
-        return array_values($unique_data); // Kembalikan data tanpa duplikasi
+        return array_values($unique_data);
     }
-
-
-
 
     public function get_all_categories() {
         // Ambil kategori dari database
