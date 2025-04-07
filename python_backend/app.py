@@ -15,8 +15,15 @@ def fetch_data_from_db():
     )
     query = "SELECT * FROM recipes"
     data = pd.read_sql(query, connection)
+    
+    # Tambahkan jalur gambar lokal atau gunakan gambar default dari Wikipedia
+    data['image'] = data['image_name'].apply(
+        lambda x: f"assets/images/recipes/{x}" if pd.notnull(x) else "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+    )
+    
     connection.close()
     return data
+
 
 # Fungsi untuk mengambil data dari API Meal DB
 def fetch_meal_db():

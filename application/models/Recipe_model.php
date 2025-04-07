@@ -2,8 +2,20 @@
 class Recipe_model extends CI_Model {
     public function get_all_recipes() {
         $query = $this->db->get('recipes');
-        return $query->result_array();
+        $recipes = $query->result_array();
+
+        foreach ($recipes as &$recipe) {
+            // Build full image path or fallback to default image
+            $recipe['image'] = !empty($recipe['image_name']) 
+                ? base_url('assets/images/recipes/' . $recipe['image_name']) 
+                : 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg';
+
+        }
+
+        return $recipes;
     }
+
+
 
     public function fetch_meal_db() {
         $api_url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";

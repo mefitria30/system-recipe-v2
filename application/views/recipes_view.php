@@ -72,8 +72,9 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <!-- Lazy Load Gambar Resep -->
-                        <img data-src="<?= isset($recipe['image']) && !empty($recipe['image']) ? $recipe['image'] : 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' ?>"
-                            class="lazyload card-img-top" alt="<?= $recipe['recipe_name'] ?>">
+                        <img data-src="<?= $recipe['image'] ?>" class="lazyload card-img-top"
+                            alt="<?= $recipe['recipe_name'] ?>">
+
 
                         <div class="card-body">
                             <h5 class="card-title"><?= $recipe['recipe_name'] ?></h5>
