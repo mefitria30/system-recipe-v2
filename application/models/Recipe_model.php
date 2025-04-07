@@ -93,6 +93,18 @@ class Recipe_model extends CI_Model {
 
         // Tetapkan cluster secara dinamis jika cluster tidak ada
         foreach ($combined_data as &$recipe) {
+            if (!isset($recipe['ingredients']) || !is_array($recipe['ingredients'])) {
+                // Jika ingredients berupa string, ubah ke array
+                $recipe['ingredients'] = is_string($recipe['ingredients'])
+                    ? array_filter(explode("\n", $recipe['ingredients'])) // Hapus elemen kosong
+                    : ['Bahan tidak tersedia'];
+            }
+
+            // Jika ingredients berupa array tetapi kosong, tambahkan pesan default
+            if (empty($recipe['ingredients'])) {
+                $recipe['ingredients'] = ['Bahan tidak tersedia'];
+            }
+            
             if (!isset($recipe['cluster']) || empty($recipe['cluster'])) {
                 if (isset($recipe['rating']) && is_numeric($recipe['rating'])) {
                     $recipe['cluster'] = $recipe['rating'] >= 4 ? 'High' : 'Low';
@@ -105,7 +117,7 @@ class Recipe_model extends CI_Model {
         // Hapus duplikasi berdasarkan nama resep (recipe_name)
         $unique_data = [];
         foreach ($combined_data as $recipe) {
-            $unique_key = strtolower(trim($recipe['recipe_name'])); // Normalisasi nama jadi lowercase tanpa spasi ekstra
+            $unique_key = strtolower(trim($recipe['recipe_name'])); // Nama normalisasi
             if (!isset($unique_data[$unique_key])) {
                 $unique_data[$unique_key] = $recipe; // Ambil data pertama sesuai prioritas
             }

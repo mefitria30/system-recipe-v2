@@ -140,10 +140,15 @@
 
                                 <h6>Bahan-Bahan:</h6>
                                 <ul>
+                                    <?php if (!empty($recipe['ingredients']) && is_array($recipe['ingredients'])): ?>
                                     <?php foreach ($recipe['ingredients'] as $ingredient): ?>
-                                    <li><?= $ingredient ?></li>
+                                    <li><?= htmlspecialchars($ingredient, ENT_QUOTES, 'UTF-8') ?></li>
                                     <?php endforeach; ?>
+                                    <?php else: ?>
+                                    <li class="text-muted">Bahan tidak tersedia.</li>
+                                    <?php endif; ?>
                                 </ul>
+
 
                                 <!-- Deskripsi dalam Format List -->
                                 <h6>Cara Membuat:</h6>
