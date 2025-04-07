@@ -1,0 +1,12 @@
+kamu tidak harus selalu menjalankan script Python app.py setiap kali proyek dijalankan. Setelah file recommendations.csv dibuat oleh script Python, PHP dapat langsung membaca file ini dan menggunakan data di dalamnya tanpa harus menjalankan ulang app.py. Namun, jika kamu ingin memperbarui data rekomendasi (misalnya, data baru dari API atau database), barulah kamu perlu menjalankan app.py.
+
+Skenario Tanpa Menjalankan Python Setiap Kali
+File recommendations.csv Tetap Ada:
+
+Jika data rekomendasi tidak sering berubah, file recommendations.csv yang sudah dihasilkan dapat terus digunakan oleh PHP tanpa perlu diperbarui.
+
+PHP hanya membaca file yang ada di direktori proyek.
+
+Memperbarui Secara Berkala:
+
+Jika data rekomendasi perlu diperbarui, kamu dapat menjalankan app.py sesuai kebutuhan (misalnya, setiap hari atau setiap minggu).
