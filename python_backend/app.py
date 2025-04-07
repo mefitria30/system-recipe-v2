@@ -59,10 +59,11 @@ def fetch_meal_db():
         api_data = []
         for meal in meals:
             api_data.append({
+                "id": meal['idMeal'],  # Gunakan idMeal sebagai ID
                 "recipe_name": meal['strMeal'],
                 "category": meal['strCategory'],
                 "main_ingredient": "API",
-                "rating": np.random.uniform(1.0, 5.0)  # Rating random
+                "rating": round(np.random.uniform(1.0, 5.0)),  # Rating random
             })
         return pd.DataFrame(api_data)
     return pd.DataFrame()
@@ -74,18 +75,9 @@ def generate_recommendations():
     api_data = fetch_meal_db()
     combined_data = pd.concat([db_data, api_data], ignore_index=True)
 
-    # Algoritma K-Means dan SVD
-    ratings = np.random.rand(len(combined_data), len(combined_data))  # Square matrix
-    U, S, VT = svd(ratings)
-
-    # Adjust matrix multiplication for alignment
-    predicted = np.dot(U, np.dot(np.diag(S[:len(U)]), VT[:len(U), :]))
-
-    # Apply K-Means clustering
-    kmeans = KMeans(n_clusters=3, random_state=0).fit(predicted)
-    combined_data['Cluster'] = kmeans.labels_
-
-
+    # Sorting berdasarkan rating tertinggi
+    combined_data = combined_data.sort_values(by='rating', ascending=False)
+    
     # Simpan hasil ke file CSV
     combined_data.to_csv("recommendations.csv", index=False)
     print("Data rekomendasi telah disimpan ke 'recommendations.csv'")
