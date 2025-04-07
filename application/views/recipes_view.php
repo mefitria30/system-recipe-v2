@@ -124,8 +124,15 @@
                                     </tbody>
                                 </table>
 
+                                <h6>Bahan-Bahan:</h6>
+                                <ul>
+                                    <?php foreach ($recipe['ingredients'] as $ingredient): ?>
+                                    <li><?= $ingredient ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+
                                 <!-- Deskripsi dalam Format List -->
-                                <h6>Deskripsi:</h6>
+                                <h6>Cara Membuat:</h6>
                                 <ol>
                                     <?php 
                                             if (!empty($recipe['description'])) {
@@ -134,7 +141,7 @@
                                     <li><?= $step ?></li>
                                     <?php endforeach;
                                             } else { ?>
-                                    <p class="text-muted">Deskripsi tidak tersedia.</p>
+                                    <p class="text-muted">Cara membuat tidak tersedia.</p>
                                     <?php } ?>
                                 </ol>
                             </div>

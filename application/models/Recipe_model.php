@@ -18,10 +18,14 @@ class Recipe_model extends CI_Model {
             $recipe['image'] = !empty($recipe['image_name']) 
                 ? base_url('assets/images/recipes/' . $recipe['image_name']) 
                 : base_url('assets/images/no_image_available.svg');
+            $recipe['ingredients'] = !empty($recipe['ingredients']) 
+                ? explode("\n", $recipe['ingredients']) 
+                : ['Bahan tidak tersedia'];
         }
 
-        return $recipes;  // Ensure enriched data includes new fields like 'description'
+        return $recipes;
     }
+
 
     public function fetch_meal_db() {
         $api_url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
@@ -37,15 +41,26 @@ class Recipe_model extends CI_Model {
                 $api_recipes = [];
                 if (!empty($data['meals'])) {
                     foreach ($data['meals'] as $meal) {
+                        $ingredients = [];
+                        for ($i = 1; $i <= 20; $i++) {
+                            $ingredient = $meal["strIngredient{$i}"];
+                            $measure = $meal["strMeasure{$i}"];
+                            if (!empty($ingredient)) {
+                                $ingredients[] = "{$measure} {$ingredient}";
+                            }
+                        }
+
                         $api_recipes[] = [
                             'recipe_name' => $meal['strMeal'],
                             'category' => $meal['strCategory'],
+                            'ingredients' => $ingredients, // Tambahkan bahan-bahan ke array
                             'main_ingredient' => $meal['strIngredient1'] ?? 'Unknown',
                             'rating' => rand(1, 5),
                             'description' => $meal['strInstructions'] ?? 'Deskripsi tidak tersedia.',
                             'image' => $meal['strMealThumb'] ?? base_url('assets/images/no_image_available.svg'),
                         ];
                     }
+
                 }
                 return $api_recipes;
 

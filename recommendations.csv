@@ -1,23 +1,70 @@
-id,recipe_name,category,main_ingredient,rating,image_name,description,ingredient_list,image
-52854,Pancakes,Dessert,API,5.0,,,,
-52811,Ribollita,Vegetarian,API,5.0,,,,
+id,recipe_name,category,main_ingredient,rating,image_name,description,ingredients,image
+53013,Big Mac,Beef,API,5.0,,"For the Big Mac sauce, combine all the ingredients in a bowl, season with salt and chill until ready to use.
+2. To make the patties, season the mince with salt and pepper and form into 4 balls using about 1/3 cup mince each. Place each onto a square of baking paper and flatten to form into four x 15cm circles. Heat oil in a large frypan over high heat. In 2 batches, cook beef patties for 1-2 minutes each side until lightly charred and cooked through. Remove from heat and keep warm. Repeat with remaining two patties.
+3. Carefully slice each burger bun into three acrossways, then lightly toast.
+4. To assemble the burgers, spread a little Big Mac sauce over the bottom base. Top with some chopped onion, shredded lettuce, slice of cheese, beef patty and some pickle slices. Top with the middle bun layer, and spread with more Big Mac sauce, onion, lettuce, pickles, beef patty and then finish with more sauce. Top with burger lid to serve.
+5. After waiting half an hour for your food to settle, go for a jog.","400g Minced Beef
+2 tbs Olive Oil
+2 Sesame Seed Burger Buns
+Chopped Onion
+1/4  Iceberg Lettuce
+2 sliced Cheese
+2 large Dill Pickles
+1 cup  Mayonnaise
+2 tsp White Wine Vinegar
+Pinch Pepper
+2 tsp Mustard
+1 1/2 tsp  Onion Salt
+1 1/2 tsp  Garlic Powder
+1/2 tsp Paprika",https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg
+37,Sashimi Tuna,Japanese,Ikan,4.9,,,,assets/images/no_image_available.svg
 5,Rendang Padang,Asian,Daging,4.9,,,,assets/images/no_image_available.svg
 30,Chicken Satay,Asian,Ayam,4.9,,,,assets/images/no_image_available.svg
-37,Sashimi Tuna,Japanese,Ikan,4.9,,,,assets/images/no_image_available.svg
 45,Peking Duck,Asian,Ayam,4.9,,,,assets/images/no_image_available.svg
 49,Seafood Paella,Spanish,Seafood,4.9,,,,assets/images/no_image_available.svg
-42,Chocolate Cake,Vegan,Self-raising Flour,4.8,,Simply mix all dry ingredients with wet ingredients and blend altogether. Bake for 45 min on 180 degrees. Decorate with some melted vegan chocolate ,,assets/images/no_image_available.svg
-17,Tiramisu,Dessert,Tepung,4.8,,,,assets/images/no_image_available.svg
-4,Sushi Roll,Japanese,Ikan,4.8,,,,assets/images/no_image_available.svg
 33,Cheesecake,Dessert,Butter,4.8,,"Position an oven shelf in the middle of the oven. Preheat the oven to fan 160C/conventional 180C/gas 4. Line the base of a 23cm springform cake tin with parchment paper. For the crust, melt the butter in a medium pan. Stir in the biscuit crumbs and sugar so the mixture is evenly moistened. Press the mixture into the bottom of the pan and bake for 10 minutes. Cool on a wire rack while preparing the filling.
 For the filling, increase the oven temperature to fan 200C/conventional 240C/gas 9. In a table top mixer fitted with the paddle attachment, beat the soft cheese at medium-low speed until creamy, about 2 minutes. With the mixer on low, gradually add the sugar, then the flour and a pinch of salt, scraping down the sides of the bowl and the paddle twice.
 Swap the paddle attachment for the whisk. Continue by adding the vanilla, lemon zest and juice. Whisk in the eggs and yolk, one at a time, scraping the bowl and whisk at least twice. Stir the 284ml carton of soured cream until smooth, then measure 200ml/7fl oz (just over 3⁄4 of the carton). Continue on low speed as you add the measured soured cream (reserve the rest). Whisk to blend, but don't over-beat. The batter should be smooth, light and somewhat airy.
 Brush the sides of the springform tin with melted butter and put on a baking sheet. Pour in the filling - if there are any lumps, sink them using a knife - the top should be as smooth as possible. Bake for 10 minutes. Reduce oven temperature to fan 90C/conventional 110C/gas 1⁄4 and bake for 25 minutes more. If you gently shake the tin, the filling should have a slight wobble. Turn off the oven and open the oven door for a cheesecake that's creamy in the centre, or leave it closed if you prefer a drier texture. Let cool in the oven for 2 hours. The cheesecake may get a slight crack on top as it cools.
 Combine the reserved soured cream with the 142ml carton, the sugar and lemon juice for the topping. Spread over the cheesecake right to the edges. Cover loosely with foil and refrigerate for at least 8 hours or overnight.
-Run a round-bladed knife around the sides of the tin to loosen any stuck edges. Unlock the side, slide the cheesecake off the bottom of the tin onto a plate, then slide the parchment paper out from underneath.",,assets/images/no_image_available.svg
-46,Chicken Parmesan,Italian,Ayam,4.8,,,,assets/images/no_image_available.svg
+Run a round-bladed knife around the sides of the tin to loosen any stuck edges. Unlock the side, slide the cheesecake off the bottom of the tin onto a plate, then slide the parchment paper out from underneath.","85g Butter
+140g Sour Cream
+1tbsp Sugar
+900g Cream Cheese
+250g Caster Sugar
+3 tbs Plain Flour
+1 ½ teaspoons Lemon Juice
+3 Large Eggs
+250ml Sour Cream
+150ml Sour Cream
+1 tbsp Caster Sugar
+2 tsp Lemon Juice",assets/images/no_image_available.svg
+42,Chocolate Cake,Vegan,Self-raising Flour,4.8,,Simply mix all dry ingredients with wet ingredients and blend altogether. Bake for 45 min on 180 degrees. Decorate with some melted vegan chocolate ,"1 1/4 cup Self-raising Flour
+1/2 cup coco sugar
+1/3 cup raw cacao
+1 tsp baking powder
+2 flax eggs
+1/2 cup almond milk
+1 tsp vanilla
+1/2 cup boiling water",assets/images/no_image_available.svg
+17,Tiramisu,Dessert,Tepung,4.8,,,,assets/images/no_image_available.svg
+4,Sushi Roll,Japanese,Ikan,4.8,,,,assets/images/no_image_available.svg
 50,Shrimp Tempura,Japanese,Seafood,4.8,,,,assets/images/no_image_available.svg
+46,Chicken Parmesan,Italian,Ayam,4.8,,,,assets/images/no_image_available.svg
 44,Gyoza,Japanese,Daging,4.7,,,,assets/images/no_image_available.svg
+47,Beef Wellington,Beef,mushrooms,4.7,,"Put the mushrooms into a food processor with some seasoning and pulse to a rough paste. Scrape the paste into a pan and cook over a high heat for about 10 mins, tossing frequently, to cook out the moisture from the mushrooms. Spread out on a plate to cool.
+Heat in a frying pan and add a little olive oil. Season the beef and sear in the hot pan for 30 secs only on each side. (You don't want to cook it at this stage, just colour it). Remove the beef from the pan and leave to cool, then brush all over with the mustard.
+Lay a sheet of cling film on a work surface and arrange the Parma ham slices on it, in slightly overlapping rows. With a palette knife, spread the mushroom paste over the ham, then place the seared beef fillet in the middle. Keeping a tight hold of the cling film from the edge, neatly roll the Parma ham and mushrooms around the beef to form a tight barrel shape. Twist the ends of the cling film to secure. Chill for 15-20 mins to allow the beef to set and keep its shape.
+Roll out the puff pastry on a floured surface to a large rectangle, the thickness of a £1 coin. Remove the cling film from the beef, then lay in the centre. Brush the surrounding pastry with egg yolk. Fold the ends over, the wrap the pastry around the beef, cutting off any excess. Turn over, so the seam is underneath, and place on a baking sheet. Brush over all the pastry with egg and chill for about 15 mins to let the pastry rest.
+Heat the oven to 200C, 400F, gas 6.
+Lightly score the pastry at 1cm intervals and glaze again with beaten egg yolk. Bake for 20 minutes, then lower the oven setting to 180C, 350F, gas 4 and cook for another 15 mins. Allow to rest for 10-15 mins before slicing and serving with the side dishes of your choice. The beef should still be pink in the centre when you serve it.","400g mushrooms
+1-2tbsp English Mustard
+Dash Olive Oil
+750g piece Beef Fillet
+6-8 slices Parma ham
+500g Puff Pastry
+Dusting Flour
+2 Beaten  Egg Yolks",assets/images/no_image_available.svg
 34,Chocolate Muffin,Dessert,Tepung,4.7,,,,assets/images/no_image_available.svg
 40,Chicken Biryani,Asian,Ayam,4.7,,,,assets/images/no_image_available.svg
 16,Ramen Tonkotsu,Japanese,Mie,4.7,,,,assets/images/no_image_available.svg
@@ -29,14 +76,24 @@ Add flour and curry powder; cook for 1 minute. Gradually stir in stock until com
 Turn down heat and simmer for 20 minutes or until sauce thickens but is still of pouring consistency. Stir in garam masala. Pour the curry sauce through a sieve; return to saucepan and keep on low heat until ready to serve.
 For the chicken: Season both sides of chicken breasts with salt and pepper. Place flour, egg and breadcrumbs in separate bowls and arrange in a row. Coat the chicken breasts in flour, then dip them into the egg, then coat in breadcrumbs, making sure you cover both sides.
 Heat oil in large frying pan over medium-high heat. Place chicken into hot oil and cook until golden brown, about 3 or 4 minutes each side. Once cooked, place on kitchen paper to absorb excess oil.
-Pour curry sauce over chicken, serve with white rice and enjoy!",,assets/images/no_image_available.svg
+Pour curry sauce over chicken, serve with white rice and enjoy!","4 pounded to 1cm thickness chicken breast
+2 tablespoons plain flour
+1 beaten egg
+100g fine breadcrumbs
+230ml frying vegetable oil
+2 tablespoons sunflower oil
+2 sliced onions
+5 chopped cloves garlic
+2 sliced carrot
+2 tablespoons plain flour
+4 teaspoons curry powder
+600ml chicken stock
+2 teaspoons honey
+4 teaspoons soy sauce
+1 bay leaf
+1 teaspoon garam masala",assets/images/no_image_available.svg
 3,Pizza Margherita,Italian,Tepung,4.7,,,,assets/images/no_image_available.svg
-47,Beef Wellington,Beef,mushrooms,4.7,,"Put the mushrooms into a food processor with some seasoning and pulse to a rough paste. Scrape the paste into a pan and cook over a high heat for about 10 mins, tossing frequently, to cook out the moisture from the mushrooms. Spread out on a plate to cool.
-Heat in a frying pan and add a little olive oil. Season the beef and sear in the hot pan for 30 secs only on each side. (You don't want to cook it at this stage, just colour it). Remove the beef from the pan and leave to cool, then brush all over with the mustard.
-Lay a sheet of cling film on a work surface and arrange the Parma ham slices on it, in slightly overlapping rows. With a palette knife, spread the mushroom paste over the ham, then place the seared beef fillet in the middle. Keeping a tight hold of the cling film from the edge, neatly roll the Parma ham and mushrooms around the beef to form a tight barrel shape. Twist the ends of the cling film to secure. Chill for 15-20 mins to allow the beef to set and keep its shape.
-Roll out the puff pastry on a floured surface to a large rectangle, the thickness of a £1 coin. Remove the cling film from the beef, then lay in the centre. Brush the surrounding pastry with egg yolk. Fold the ends over, the wrap the pastry around the beef, cutting off any excess. Turn over, so the seam is underneath, and place on a baking sheet. Brush over all the pastry with egg and chill for about 15 mins to let the pastry rest.
-Heat the oven to 200C, 400F, gas 6.
-Lightly score the pastry at 1cm intervals and glaze again with beaten egg yolk. Bake for 20 minutes, then lower the oven setting to 180C, 350F, gas 4 and cook for another 15 mins. Allow to rest for 10-15 mins before slicing and serving with the side dishes of your choice. The beef should still be pink in the centre when you serve it.",,assets/images/no_image_available.svg
+13,Pancake Coklat,Dessert,Tepung,4.6,,,,assets/images/no_image_available.svg
 31,Lo Mein,Beef,Beef,4.6,,"STEP 1 - MARINATING THE BEEF
 In a bowl, add the beef, salt, 1 pinch white pepper, 1 Teaspoon sesame seed oil, 1/2 egg, corn starch,1 Tablespoon of oil and mix together.
 STEP 2 - BOILING THE THE NOODLES
@@ -47,9 +104,24 @@ Set the cooked beef aside
 In a wok add 2 Tablespoon of oil, onions, minced garlic, minced ginger, bean sprouts, mushrooms, peapods and 1.5 cups of water or until the vegetables are submerged in water.
 Add the noodles to wok
 To make the sauce, add oyster sauce, 1 pinch white pepper, 1 teaspoon sesame seed oil, sugar, and 1 Teaspoon of soy sauce.
-Next add the beef to wok and stir-fry",,assets/images/no_image_available.svg
+Next add the beef to wok and stir-fry","1/2 lb Beef
+pinch Salt
+pinch Pepper
+2 tsp Sesame Seed Oil
+1/2  Egg
+3 tbs Starch
+5 tbs Oil
+1/4 lb Noodles
+1/2 cup  Onion
+1 tsp  Minced Garlic
+1 tsp  Ginger
+1 cup  Bean Sprouts
+1 cup  Mushrooms
+1 cup  Water
+1 tbs Oyster Sauce
+1 tsp  Sugar
+1 tsp  Soy Sauce",assets/images/no_image_available.svg
 36,Penne Arrabiata,Italian,Pasta,4.6,,,,assets/images/no_image_available.svg
-13,Pancake Coklat,Dessert,Tepung,4.6,,,,assets/images/no_image_available.svg
 21,Pad Thai,Asian,Mie,4.6,,,,assets/images/no_image_available.svg
 8,Sate Ayam,Asian,Ayam,4.6,,,,assets/images/no_image_available.svg
 1,Nasi Goreng,Asian,Nasi,4.5,nasi_goreng.png,"Panaskan sedikit minyak di wajan.
@@ -57,69 +129,482 @@ Pecahkan telur, masak sebentar, lalu aduk.
 Masukkan nasi putih dan tambahkan kecap manis.
 Aduk hingga rata dan hangat.",,assets/images/recipes/nasi_goreng.png
 43,French Toast,Dessert,Tepung,4.5,,,,assets/images/no_image_available.svg
-25,Fried Rice Special,Asian,Nasi,4.5,,,,assets/images/no_image_available.svg
-14,Nasi Biryani,Asian,Nasi,4.5,,,,assets/images/no_image_available.svg
 48,Clam Chowder,Starter,Clams,4.5,,"Rinse the clams in several changes of cold water and drain well. Tip the clams into a large pan with 500ml of water. Cover, bring to the boil and simmer for 2 mins until the clams have just opened. Tip the contents of the pan into a colander over a bowl to catch the clam stock. When cool enough to handle, remove the clams from their shells – reserving a handful of empty shells for presentation if you want. Strain the clam stock into a jug, leaving any grit in the bottom of the bowl. You should have around 800ml stock.
 Heat the butter in the same pan and sizzle the bacon for 3-4 mins until it starts to brown. Stir in the onion, thyme and bay and cook everything gently for 10 mins until the onion is soft and golden. Scatter over the flour and stir in to make a sandy paste, cook for 2 mins more, then gradually stir in the clam stock then the milk and the cream.
-Throw in the potatoes, bring everything to a simmer and leave to bubble away gently for 10 mins or until the potatoes are cooked. Use a fork to crush a few of the potato chunks against the side of the pan to help thicken – you still want lots of defined chunks though. Stir through the clam meat and the few clam shells, if you've gone down that route, and simmer for a minute to reheat. Season with plenty of black pepper and a little salt, if needed, then stir through the parsley just before ladling into bowls or hollowed-out crusty rolls.",,assets/images/no_image_available.svg
+Throw in the potatoes, bring everything to a simmer and leave to bubble away gently for 10 mins or until the potatoes are cooked. Use a fork to crush a few of the potato chunks against the side of the pan to help thicken – you still want lots of defined chunks though. Stir through the clam meat and the few clam shells, if you've gone down that route, and simmer for a minute to reheat. Season with plenty of black pepper and a little salt, if needed, then stir through the parsley just before ladling into bowls or hollowed-out crusty rolls.","1½ kg Clams
+50g Butter
+150g Bacon
+1 finely chopped  Onion
+sprigs of fresh Thyme
+1 Bay Leaf
+1 tbls Plain Flour
+150ml Milk
+150ml Double Cream
+2 medium Potatoes
+Chopped Parsley",assets/images/no_image_available.svg
+25,Fried Rice Special,Asian,Nasi,4.5,,,,assets/images/no_image_available.svg
 24,Brownies,Dessert,Dark Chocolate,4.5,,"Heat oven to 180C/160C fan/gas 4. Line a 20 x 30cm baking tray tin with baking parchment. Put the chocolate, butter and sugar in a pan and gently melt, stirring occasionally with a wooden spoon. Remove from the heat.
-Stir the eggs, one by one, into the melted chocolate mixture. Sieve over the flour and cocoa, and stir in. Stir in half the raspberries, scrape into the tray, then scatter over the remaining raspberries. Bake on the middle shelf for 30 mins or, if you prefer a firmer texture, for 5 mins more. Cool before slicing into squares. Store in an airtight container for up to 3 days.",,assets/images/no_image_available.svg
-9,Mie Goreng Jawa,Asian,Mie,4.4,,,,assets/images/no_image_available.svg
+Stir the eggs, one by one, into the melted chocolate mixture. Sieve over the flour and cocoa, and stir in. Stir in half the raspberries, scrape into the tray, then scatter over the remaining raspberries. Bake on the middle shelf for 30 mins or, if you prefer a firmer texture, for 5 mins more. Cool before slicing into squares. Store in an airtight container for up to 3 days.","200g Dark Chocolate
+100g  Milk Chocolate
+250g Salted Butter
+400g Light Brown Soft Sugar
+4 large Eggs
+140g Plain Flour
+50g Cocoa
+200g Raspberries",assets/images/no_image_available.svg
+14,Nasi Biryani,Asian,Nasi,4.5,,,,assets/images/no_image_available.svg
 15,Lasagna Classic,Italian,Pasta,4.4,,,,assets/images/no_image_available.svg
+9,Mie Goreng Jawa,Asian,Mie,4.4,,,,assets/images/no_image_available.svg
 23,Churros,Dessert,Tepung,4.4,,,,assets/images/no_image_available.svg
-26,Fettuccine Alfredo,Pasta,Fettuccine,4.4,,"Cook pasta according to package instructions in a large pot of boiling water and salt. Add heavy cream and butter to a large skillet over medium heat until the cream bubbles and the butter melts. Whisk in parmesan and add seasoning (salt and black pepper). Let the sauce thicken slightly and then add the pasta and toss until coated in sauce. Garnish with parsley, and it's ready.",,assets/images/no_image_available.svg
+26,Fettuccine Alfredo,Pasta,Fettuccine,4.4,,"Cook pasta according to package instructions in a large pot of boiling water and salt. Add heavy cream and butter to a large skillet over medium heat until the cream bubbles and the butter melts. Whisk in parmesan and add seasoning (salt and black pepper). Let the sauce thicken slightly and then add the pasta and toss until coated in sauce. Garnish with parsley, and it's ready.","1 lb Fettuccine
+1/2 cup  Heavy Cream
+1/2 cup  Butter
+1/2 cup  Parmesan
+2 tbsp Parsley
+Black Pepper",assets/images/no_image_available.svg
 2,Spaghetti Carbonara,Pasta,Pasta,4.3,,,,assets/images/no_image_available.svg
-22,Burrito Chicken,Mexican,Tortilla,4.3,,,,assets/images/no_image_available.svg
-11,Nachos Deluxe,Mexican,Tortilla,4.3,,,,assets/images/no_image_available.svg
 35,Risotto,Seafood,butter,4.3,,"Melt the butter in a thick-based pan and gently cook the onion without colour until it is soft.
 Add the rice and stir to coat all the grains in the butter
 Add the wine and cook gently stirring until it is absorbed
 Gradually add the hot stock, stirring until each addition is absorbed. Keep stirring until the rice is tender
 Season with the lemon juice and zest, and pepper to taste. (there will probably be sufficient saltiness from the salmon to not need to add salt) Stir gently to heat through
 Serve scattered with the Parmesan and seasonal vegetables.
-Grill the salmon and gently place onto the risotto with the prawns and asparagus",,assets/images/no_image_available.svg
-12,Donat Gula,Dessert,Tepung,4.2,,,,assets/images/no_image_available.svg
-6,Beef Burger,Western,Daging,4.2,,,,assets/images/no_image_available.svg
-28,Beef Stew,Western,Daging,4.2,,,,assets/images/no_image_available.svg
+Grill the salmon and gently place onto the risotto with the prawns and asparagus","50g/2oz butter
+1 finely chopped  onion
+150g rice
+125ml  white wine
+1 litre hot vegetable stock
+The juice and zest of one lemon
+240g large King Prawns
+150g salmon
+100g tips blanched briefly in boiling water asparagus
+ground black pepper
+50g shavings Parmesan",assets/images/no_image_available.svg
+22,Burrito Chicken,Mexican,Tortilla,4.3,,,,assets/images/no_image_available.svg
+11,Nachos Deluxe,Mexican,Tortilla,4.3,,,,assets/images/no_image_available.svg
 32,Quesadilla,Mexican,Tortilla,4.2,,,,assets/images/no_image_available.svg
-41,Veggie Burrito,Mexican,Sayur,4.2,,,,assets/images/no_image_available.svg
+28,Beef Stew,Western,Daging,4.2,,,,assets/images/no_image_available.svg
+6,Beef Burger,Western,Daging,4.2,,,,assets/images/no_image_available.svg
+12,Donat Gula,Dessert,Tepung,4.2,,,,assets/images/no_image_available.svg
 38,Meatloaf,Miscellaneous,Olive Oil,4.2,,"Heat oven to 180C/160C fan/gas 4. Heat the oil in a large frying pan and cook the onion for 8-10 mins until softened. Add the garlic, Worcestershire sauce and 2 tsp tomato purée, and stir until combined. Set aside to cool.
 
 Put the turkey mince, egg, breadcrumbs and cooled onion mix in a large bowl and season well. Mix everything to combine, then shape into a rectangular loaf and place in a large roasting tin. Spread 2 tbsp barbecue sauce over the meatloaf and bake for 30 mins.
 
 Meanwhile, drain 1 can of beans only, then pour both cans into a large bowl. Add the remaining barbecue sauce and tomato purée. Season and set aside.
 
-When the meatloaf has had its initial cooking time, scatter the beans around the outside and bake for 15 mins more until the meatloaf is cooked through and the beans are piping hot. Scatter over the parsley and serve the meatloaf in slices.",,assets/images/no_image_available.svg
-7,Caesar Salad,Western,Sayur,4.1,,,,assets/images/no_image_available.svg
+When the meatloaf has had its initial cooking time, scatter the beans around the outside and bake for 15 mins more until the meatloaf is cooked through and the beans are piping hot. Scatter over the parsley and serve the meatloaf in slices.","1 tblsp  Olive Oil
+1 large Onion
+1 clove peeled crushed Garlic
+2 tblsp  Worcestershire Sauce
+3 tsp Tomato Puree
+500g Turkey Mince
+1 large Eggs
+85g Breadcrumbs
+2 tblsp  Barbeque Sauce
+800g Cannellini Beans
+2 tblsp  Parsley",assets/images/no_image_available.svg
+41,Veggie Burrito,Mexican,Sayur,4.2,,,,assets/images/no_image_available.svg
 19,Greek Salad,Chicken,Quinoa,4.1,,"Cook the quinoa following the pack instructions, then rinse in cold water and drain thoroughly.
 
 Meanwhile, mix the butter, chilli and garlic into a paste. Toss the chicken fillets in 2 tsp of the olive oil with some seasoning. Lay in a hot griddle pan and cook for 3-4 mins each side or until cooked through. Transfer to a plate, dot with the spicy butter and set aside to melt.
 
-Next, tip the tomatoes, olives, onion, feta and mint into a bowl. Toss in the cooked quinoa. Stir through the remaining olive oil, lemon juice and zest, and season well. Serve with the chicken fillets on top, drizzled with any buttery chicken juices.",,assets/images/no_image_available.svg
+Next, tip the tomatoes, olives, onion, feta and mint into a bowl. Toss in the cooked quinoa. Stir through the remaining olive oil, lemon juice and zest, and season well. Serve with the chicken fillets on top, drizzled with any buttery chicken juices.","225g Quinoa
+25g Butter
+1 chopped Red Chilli
+1 clove finely chopped Garlic
+400g Chicken Breast
+2 tbs Olive Oil
+Handful Black Olives
+1 chopped Red Onions
+100g  Feta
+Chopped Mint
+Juice of 1/2 Lemon",assets/images/no_image_available.svg
+7,Caesar Salad,Western,Sayur,4.1,,,,assets/images/no_image_available.svg
 10,Tacos Beef,Mexican,Tortilla,4.0,,,,assets/images/no_image_available.svg
+39,Coleslaw,Western,Sayur,4.0,,,,assets/images/no_image_available.svg
 18,Hotdog,Western,Daging,4.0,,,,assets/images/no_image_available.svg
 29,Veggie Salad,Western,Sayur,4.0,,,,assets/images/no_image_available.svg
-39,Coleslaw,Western,Sayur,4.0,,,,assets/images/no_image_available.svg
-52971,Kafteji,Vegetarian,API,4.0,,,,
-52948,Wontons,Pork,API,4.0,,,,
-53028,Shawarma,Chicken,API,4.0,,,,
-53013,Big Mac,Beef,API,4.0,,,,
-52785,Dal fry,Vegetarian,API,4.0,,,,
-53069,Bistek,Beef,API,4.0,,,,
-53060,Burek,Side,API,4.0,,,,
-53052,Roti john,Beef,API,4.0,,,,
-52887,Kedgeree,Seafood,API,4.0,,,,
-53006,Moussaka,Beef,API,4.0,,,,
-52844,Lasagne,Pasta,API,4.0,,,,
-53065,Sushi,Seafood,API,3.0,,,,
-52906,Flamiche,Vegetarian,API,3.0,,,,
-52769,Kapsalon,Lamb,API,3.0,,,,
-53026,Tamiya,Vegetarian,API,3.0,,,,
-52929,Timbits,Dessert,API,3.0,,,,
-52980,Stamppot,Pork,API,2.0,,,,
-53086,Migas,Miscellaneous,API,2.0,,,,
-52977,Corba,Side,API,2.0,,,,
-52802,Fish pie,Seafood,API,2.0,,,,
-52978,Kumpir,Side,API,1.0,,,,
-53027,Koshari,Vegetarian,API,1.0,,,,
-52804,Poutine,Miscellaneous,API,1.0,,,,
+52971,Kafteji,Vegetarian,API,4.0,,"Peel potatoes and cut into 5cm cubes.
+Pour 1-2 cm of olive oil into a large pan and heat up very hot. Fry potatoes until golden brown for 20 minutes, turning from time to time. Place on kitchen paper to drain.
+Cut the peppers in half and remove seeds. Rub a little olive oil on them and place the cut side down on a baking tray. Place them under the grill. Grill until the skin is dark and bubbly. While the peppers are still hot, put them into a plastic sandwich bag and seal it. Take them out after 15 minutes and remove skins.
+In the meantime, heat more olive oil another pan. Peel the onions and cut into thin rings. Fry for 15 minutes until golden brown, turning them often. Add the Ras el hanout at the end.
+Cut the pumpkin into 5cm cubes and fry in the same pan you used for the potatoes for 10-15 minutes until it is soft and slightly browned. Place on kitchen paper.
+Pour the remaining olive oil out of the pan and put all the cooked vegetables into the pan and mix. Whisk eggs and pour them over the vegetables. Put the lid on the pan so that the eggs cook. Put the contents of the pan onto a large chopping board, add salt and pepper and chopped and mix everything with a big knife.","5 Large Potatoes
+2 tbs Olive Oil
+1 Green Pepper
+5 Onions
+1 tbs Ras el hanout
+500g Pumpkin
+24 Skinned Eggs
+Pinch Salt
+Pinch Pepper",https://www.themealdb.com/images/media/meals/1bsv1q1560459826.jpg
+52785,Dal fry,Vegetarian,API,4.0,,"Wash and soak toor dal in approx. 3 cups of water, for at least one hours. Dal will be double in volume after soaking. Drain the water.
+Cook dal with 2-1/2 cups water and add salt, turmeric, on medium high heat, until soft in texture (approximately 30 mins) it should be like thick soup.
+In a frying pan, heat the ghee. Add cumin seeds, and mustard seeds. After the seeds crack, add bay leaves, green chili, ginger and chili powder. Stir for a few seconds.
+Add tomatoes, salt and sugar stir and cook until tomatoes are tender and mushy.
+Add cilantro and garam masala cook for about one minute.
+Pour the seasoning over dal mix it well and cook for another minute.
+Serve with Naan.","1 cup Toor dal
+2-1/2 cups Water
+1 tsp Salt
+1/4 tsp Turmeric
+3 tbs Ghee
+1 cup Chopped tomatoes
+1/2 tsp Cumin seeds
+1/2 tsp Mustard Seeds
+2 Bay Leaf
+1 tbs chopped Green Chilli
+2 tsp shredded Ginger
+2 tbs  Cilantro
+1/2 tsp Red Pepper
+1/2 tsp Salt
+1 tsp Sugar
+1/4 tsp Garam Masala",https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg
+53006,Moussaka,Beef,API,4.0,,"Heat the grill to high. Brown the beef in a deep ovenproof frying pan over a high heat for 5 mins. Meanwhile, prick the aubergine with a fork, then microwave on High for 3-5 mins until soft. Mix the yogurt, egg and parmesan together, then add a little seasoning.
+
+Stir the tomatoes, purée and potatoes in with the beef with some seasoning and heat through. Smooth the surface of the beef mixture with the back of a spoon, then slice the cooked aubergine and arrange on top. Pour the yogurt mixture over the aubergines, smooth out evenly, then grill until the topping has set and turned golden.","500g Beef
+1 large Aubergine
+150g Greek Yogurt
+1 beaten Egg
+3 tbs Parmesan
+400g Tomato
+4 tbs Tomato Puree
+350g Potatoes",https://www.themealdb.com/images/media/meals/ctg8jd1585563097.jpg
+52980,Stamppot,Pork,API,4.0,,"
+Wash and peel the potatoes and cut into similarly sized pieces for even cooking.
+
+In a large soup pot, boil the potatoes and the bay leaves in salted water for 20 minutes. Discard the bay leaves.
+
+If you're not using a bag of ready-cut curly kale, wash the bunches thoroughly under cool running water to get rid of all soil—you wouldn't want that gritty texture in your finished dish. Trim any coarse stems and discard any brown leaves. With a sharp knife, cut the curly kale into thin strips.
+
+Peel and chop the shallots.
+
+In a frying pan or skillet, melt 1 tbsp. of butter and saute the shallots for a few minutes before adding the curly kale and 2 tbsp. of water. Season and cook for about 10 minutes, or until tender.
+
+Warm the milk on the stove or in the microwave.
+
+Drain, shake and dry the potatoes with kitchen towels before mashing with a potato masher or ricer. Working quickly, add the warm milk and the remaining butter. Season to taste with nutmeg, salt, and pepper. 
+
+Mix the cooked curly kale through the cooked mashed potato mixture.
+
+Top with slices of the smoked sausage and serve hot with your favorite mustard or gravy.
+
+Serve and enjoy!","1.5kg Potatoes
+2 leaves Bay Leaf
+2 Shallots
+3 tbs Butter
+750g Kale
+2 Sausages
+500ml Milk
+Grated Nutmeg
+Pinch Salt
+Pinch Pepper",https://www.themealdb.com/images/media/meals/hyarod1565090529.jpg
+53027,Koshari,Vegetarian,API,4.0,,"Cook the lentils. Bring lentils and 4 cups of water to a boil in a medium pot or saucepan over high heat. Reduce the heat to low and cook until lentils are just tender (15-17 minutes). Drain from water and season with a little salt. (Note: when the lentils are ready, they should not be fully cooked. They should be only par-cooked and still have a bite to them as they need to finish cooking with the rice).
+Now, for the rice. Drain the rice from its soaking water. Combine the par-cooked lentils and the rice in the saucepan over medium-high heat with 1 tbsp cooking oil, salt, pepper, and coriander. Cook for 3 minutes, stirring regularly. Add warm water to cover the rice and lentil mixture by about 1 1/2 inches (you’ll probably use about 3 cups of water here). Bring to a boil; the water should reduce a bit. Now cover and cook until all the liquid has been absorbed and both the rice and lentils are well cooked through (about 20 minutes).  Keep covered and undisturbed for 5 minutes or so.
+Now make the pasta. While the rice and lentils are cooking, make the pasta according to package instructions by adding the elbow pasta to boiling water with a dash of salt and a little oil. Cook until the pasta is al dente. Drain.
+Cover the chickpeas and warm in the microwave briefly before serving.
+
+Make the crispy onion topping. 
+
+Sprinkle the onion rings with salt, then toss them in the flour to coat. Shake off excess flour.
+In a large skillet, heat the cooking oil over medium-high heat, cook the onion rings, stirring often, until they turn a nice caramelized brown. Onions must be crispy, but not burned (15-20 minutes).","1 1/2 cups  Brown Lentils
+1 1/2 cups  Rice
+1/2 tsp Coriander
+2 cups  Macaroni
+Can Chickpeas
+1 large Onion
+Sprinking Salt
+1/2 cup  Vegetable Oil",https://www.themealdb.com/images/media/meals/4er7mj1598733193.jpg
+53065,Sushi,Seafood,API,4.0,,"STEP 1
+TO MAKE SUSHI ROLLS: Pat out some rice. Lay a nori sheet on the mat, shiny-side down. Dip your hands in the vinegared water, then pat handfuls of rice on top in a 1cm thick layer, leaving the furthest edge from you clear.
+
+STEP 2
+Spread over some Japanese mayonnaise. Use a spoon to spread out a thin layer of mayonnaise down the middle of the rice.
+
+STEP 3
+Add the filling. Get your child to top the mayonnaise with a line of their favourite fillings – here we’ve used tuna and cucumber.
+
+STEP 4
+Roll it up. Lift the edge of the mat over the rice, applying a little pressure to keep everything in a tight roll.
+
+STEP 5
+Stick down the sides like a stamp. When you get to the edge without any rice, brush with a little water and continue to roll into a tight roll.
+
+STEP 6
+Wrap in cling film. Remove the mat and roll tightly in cling film before a grown-up cuts the sushi into thick slices, then unravel the cling film.
+
+STEP 7
+TO MAKE PRESSED SUSHI: Layer over some smoked salmon. Line a loaf tin with cling film, then place a thin layer of smoked salmon inside on top of the cling film.
+
+STEP 8
+Cover with rice and press down. Press about 3cm of rice over the fish, fold the cling film over and press down as much as you can, using another tin if you have one.
+
+STEP 9
+Tip it out like a sandcastle. Turn block of sushi onto a chopping board. Get a grown-up to cut into fingers, then remove the cling film.
+
+STEP 10
+TO MAKE SUSHI BALLS: Choose your topping. Get a small square of cling film and place a topping, like half a prawn or a small piece of smoked salmon, on it. Use damp hands to roll walnut-sized balls of rice and place on the topping.
+
+STEP 11
+Make into tight balls. Bring the corners of the cling film together and tighten into balls by twisting it up, then unwrap and serve.","300ml  Sushi Rice
+100ml Rice wine
+2 tbs Caster Sugar
+3 tbs Mayonnaise
+1 tbs Rice wine
+1 tbs Soy Sauce
+1 Cucumber",https://www.themealdb.com/images/media/meals/g046bb1663960946.jpg
+52929,Timbits,Dessert,API,4.0,,"Sift together dry ingredients.
+Mix together wet ingredients and incorporate into dry. Stir until smooth.
+Drop by teaspoonfuls(no bigger) into hot oil (365 degrees, no hotter), turning after a few moments until golden brown on all sides.
+Remove and drain.
+Roll in cinnamon sugar while still warm and serve.","2 cups  Flour
+1/3 cup Sugar
+3 tsp Baking Powder
+½ tsp Salt
+1 beaten Egg
+¾ cup Milk
+3 tbs Oil
+for frying Oil
+garnish Icing Sugar",https://www.themealdb.com/images/media/meals/txsupu1511815755.jpg
+53086,Migas,Miscellaneous,API,3.0,,"Crumble the bread into small pieces. Sprinkle with cold water, cover with a damp cloth and leave for 30 minutes.
+Heat 2 tsp of olive oil in a deep pan. Add the garlic cloves separated, skins on; just make a small cut with a knife to open them and keep frying for 5 minutes. Set the garlic aside.
+In the same oil, where we fried everything, simmer the bread, stirring constantly for 15 minutes and add a grinding of black pepper.
+Add the garlic, continue stirring for about 20 minutes. It will be ready when the bread is soft and golden.","1 large Bread
+1 1/2 L  Olive Oil
+Half Garlic
+1 Handfull Pork",https://www.themealdb.com/images/media/meals/xd9aj21740432378.jpg
+53060,Burek,Side,API,3.0,,"Fry the finely chopped onions and minced meat in oil. Add the salt and pepper. Grease a round baking tray and put a layer of pastry in it. Cover with a thin layer of filling and cover this with another layer of filo pastry which must be well coated in oil. Put another layer of filling and cover with pastry. When you have five or six layers, cover with filo pastry, bake at 200ºC/392ºF for half an hour and cut in quarters and serve.","1 Packet Filo Pastry
+150g Minced Beef
+150g Onion
+40g Oil
+Dash Salt
+Dash Pepper",https://www.themealdb.com/images/media/meals/tkxquw1628771028.jpg
+53026,Tamiya,Vegetarian,API,3.0,,"oak the beans in water to cover overnight.Drain. If skinless beans are unavailable, rub to loosen the skins, then discard the skins. Pat the beans dry with a towel.
+Grind the beans in a food mill or meat grinder.If neither appliance is available, process them in a food processor but only until the beans form a paste. (If blended too smoothly, the batter tends to fall apart during cooking.) Add the scallions, garlic, cilantro, cumin, baking powder, cayenne, salt, pepper, and coriander, if using.  Refrigerate for at least 30 minutes.
+Shape the bean mixture into 1-inch balls.Flatten slightly and coat with flour.
+Heat at least 1½-inches of oil over medium heat to 365 degrees.
+Fry the patties in batches, turning once, until golden brown on all sides, about 5 minutes.Remove with a wire mesh skimmer or slotted spoon. Serve as part of a meze or in pita bread with tomato-cucumber salad and tahina sauce.","3 cups  Broad Beans
+6 Spring Onions
+4 Garlic Clove
+1/4 cup Parsley
+2 tsp Cumin
+1 tsp  Baking Powder
+1/2 tsp Cayenne Pepper
+Spinkling Flour
+As required Vegetable Oil",https://www.themealdb.com/images/media/meals/n3xxd91598732796.jpg
+52804,Poutine,Miscellaneous,API,3.0,,"Heat oil in a deep fryer or deep heavy skillet to 365°F (185°C).
+Warm gravy in saucepan or microwave.
+Place the fries into the hot oil, and cook until light brown, about 5 minutes.
+Remove to a paper towel lined plate to drain.
+Place the fries on a serving platter, and sprinkle the cheese over them.
+Ladle gravy over the fries and cheese, and serve immediately.","Dash Vegetable Oil
+1 Can Beef Gravy
+5 thin cut Potatoes
+2 cups Cheese Curds",https://www.themealdb.com/images/media/meals/uuyrrx1487327597.jpg
+52906,Flamiche,Vegetarian,API,3.0,,"For the pastry, sift the flour and salt into the bowl of a food processor, add the butter and lard, then whizz together briefly until the mixture looks like fine breadcrumbs. Tip the mixture into a bowl, then stir in the cheese and enough of the water for the mixture to come together. Tip out onto a lightly floured surface and knead briefly until smooth. Roll out thinly and line a 23cm x 4cm loose-?bottomed fluted flan tin. Prick the base with a fork. Chill for 20 minutes.
+02.Melt the 75g butter in a saucepan over a low heat, then add the leeks and the salt. Cover and cook for ?10 minutes until soft. Uncover the pan, increase the heat and cook ?for 2 minutes, stirring occasionally, until the liquid has evaporated. Spoon onto a plate and leave to cool.
+03.Preheat the oven to 200°C/fan180°C/gas 6. Line the pastry case with baking paper and baking beans or rice and blind bake for 15-20 minutes until the edges are biscuit-coloured. Remove the paper and beans/rice and return the case to the oven for 7-10 minutes until the base is crisp and lightly golden. Remove and set aside. Reduce the oven temperature to 190°C/fan170°C/gas 5.
+04.Put the crème fraîche into a bowl with the whole egg, egg yolks and nutmeg. Lightly beat together, then season. Stir in the leeks. Spoon ?the mixture into the tart case and bake for 35-40 minutes until set ?and lightly golden. Remove from ?the oven and leave for 10 minutes. Take out of the tin and serve.","75g Butter
+1kg Leek
+½ tsp Salt
+300ml  Creme Fraiche
+1 Egg
+3 Egg Yolks
+¼ teaspoon Nutmeg
+225g Plain Flour
+½ tsp Salt
+60g Butter
+60g Lard
+50g Cheddar Cheese
+2 tbs Water",https://www.themealdb.com/images/media/meals/wssvvs1511785879.jpg
+53052,Roti john,Beef,API,2.0,,"Mix all the ingredients in a bowl.
+Heat a pan or griddle with a little vegetable oil.
+Pour the mixture onto the pan and place a piece of open-faced baguette on top.
+Press on the bread with a spatula and grill for 2 minutes.
+Turn the bread over to make it a little crispy.
+Remove from pan and cut the bread into small portions.
+Add mayonnaise and/or Sambal before cutting the sandwich (optional).","1/4 lb Minced Beef
+1 Onion
+3 Eggs
+1 tbs Chilli
+1/2  Baguette
+To taste Salt
+To taste Pepper
+Top Mayonnaise",https://www.themealdb.com/images/media/meals/hx335q1619789561.jpg
+52769,Kapsalon,Lamb,API,2.0,,"Cut the meat into strips. Heat oil in a pan and fry the strips for 6 minutes until it's ready.
+Bake the fries until golden brown in a deep fryrer. When ready transfer to a backing dish. Make sure the fries are spread over the whole dish.
+Cover the fries with a new layer of meat and spread evenly.
+Add a layer of cheese over the meat. You can also use grated cheese. When done put in the oven for a few minutes until the cheese is melted.
+Chop the lettuce, tomato and cucumber in small pieces and mix together. for a basic salad. As extra you can add olives jalapenos and a red union.
+Dived the salad over the dish and Serve with garlicsauce and hot sauce","250 Grams Fries
+500 Grams Doner Meat
+Topping Garlic sauce
+Topping Hotsauce
+1 Bulb Lettuce
+1 Tomato
+3rd Cucumber
+100 Grams Gouda cheese",https://www.themealdb.com/images/media/meals/sxysrt1468240488.jpg
+52854,Pancakes,Dessert,API,2.0,,"Put the flour, eggs, milk, 1 tbsp oil and a pinch of salt into a bowl or large jug, then whisk to a smooth batter. Set aside for 30 mins to rest if you have time, or start cooking straight away.
+Set a medium frying pan or crêpe pan over a medium heat and carefully wipe it with some oiled kitchen paper. When hot, cook your pancakes for 1 min on each side until golden, keeping them warm in a low oven as you go.
+Serve with lemon wedges and sugar, or your favourite filling. Once cold, you can layer the pancakes between baking parchment, then wrap in cling film and freeze for up to 2 months.","100g  Flour
+2 large Eggs
+300ml  Milk
+1 tbls Sunflower Oil
+to serve Sugar
+to serve Raspberries
+to serve Blueberries",https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg
+52978,Kumpir,Side,API,2.0,,"If you order kumpir in Turkey, the standard filling is first, lots of butter mashed into the potato, followed by cheese. There’s then a row of other toppings that you can just point at to your heart’s content – sweetcorn, olives, salami, coleslaw, Russian salad, allsorts – and you walk away with an over-stuffed potato because you got ever-excited by the choices on offer.
+
+Grate (roughly – you can use as much as you like) 150g of cheese.
+Finely chop one onion and one sweet red pepper.
+Put these ingredients into a large bowl with a good sprinkling of salt and pepper, chilli flakes (optional).","2 large Potatoes
+2 tbs Butter
+150g Cheese
+1 large Onion
+1 large Red Pepper
+Pinch Red Chilli Flakes",https://www.themealdb.com/images/media/meals/mlchx21564916997.jpg
+52887,Kedgeree,Seafood,API,2.0,,"For the rice, heat the oil in a large, lidded pan, add the onion, then gently fry for 5 mins until softened but not coloured. Add the spices, season with salt, then continue to fry until the mix start to go brown and fragrant; about 3 mins.
+Add the rice and stir in well. Add 600ml water, stir, then bring to the boil. Reduce to a simmer, then cover for 10 mins. Take off the heat and leave to stand, covered, for 10-15 mins more. The rice will be perfectly cooked if you do not lift the lid before the end of the cooking.
+Meanwhile, put the haddock and bay leaves in a frying pan, cover with the milk, then poach for 10 mins until the flesh flakes. Remove from the milk, peel away the skin, then flake the flesh into thumbsize pieces. Place the eggs in a pan, cover with water, bring to the boil, then reduce to a simmer. Leave for 4½-5 mins, plunge into cold water, then peel and cut the eggs into quarters. Gently mix the fish, eggs, parsley, coriander and rice together in the pan. Serve hot, sprinkled with a few extra herbs.","300g Smoked Haddock
+2 Bay Leaves
+300ml  Milk
+4 Eggs
+Handful Parsley
+Handful Coriander
+2 tbs Vegetable Oil
+1 chopped Onion
+1 tsp  Coriander
+2 tsp Curry Powder
+300g Rice",https://www.themealdb.com/images/media/meals/utxqpt1511639216.jpg
+52948,Wontons,Pork,API,1.0,,"Combine pork, garlic, ginger, soy sauce, sesame oil, and vegetables in a bowl.
+Separate wonton skins.
+Place a heaping teaspoon of filling in the center of the wonton.
+Brush water on 2 borders of the skin, covering 1/4 inch from the edge.
+Fold skin over to form a triangle, sealing edges.
+Pinch the two long outside points together.
+Heat oil to 450 degrees and fry 4 to 5 at a time until golden.
+Drain and serve with sauce.","1lb Pork
+3 chopped Garlic Clove
+1 tsp  Ginger
+1 tbs Soy Sauce
+1 tsp  Sesame Seed Oil
+3 finely chopped Carrots
+3 finely chopped Celery
+6 chopped Spring Onions
+1 Packet Wonton Skin
+Fry Oil
+Bottle Water",https://www.themealdb.com/images/media/meals/1525876468.jpg
+52977,Corba,Side,API,1.0,,"Pick through your lentils for any foreign debris, rinse them 2 or 3 times, drain, and set aside.  Fair warning, this will probably turn your lentils into a solid block that you’ll have to break up later
+In a large pot over medium-high heat, sauté the olive oil and the onion with a pinch of salt for about 3 minutes, then add the carrots and cook for another 3 minutes.
+Add the tomato paste and stir it around for around 1 minute. Now add the cumin, paprika, mint, thyme, black pepper, and red pepper as quickly as you can and stir for 10 seconds to bloom the spices. Congratulate yourself on how amazing your house now smells.
+Immediately add the lentils, water, broth, and salt. Bring the soup to a (gentle) boil.
+After it has come to a boil, reduce heat to medium-low, cover the pot halfway, and cook for 15-20 minutes or until the lentils have fallen apart and the carrots are completely cooked.
+After the soup has cooked and the lentils are tender, blend the soup either in a blender or simply use a hand blender to reach the consistency you desire. Taste for seasoning and add more salt if necessary.
+Serve with crushed-up crackers, torn up bread, or something else to add some extra thickness.  You could also use a traditional thickener (like cornstarch or flour), but I prefer to add crackers for some texture and saltiness.  Makes great leftovers, stays good in the fridge for about a week.","1 cup  Lentils
+1 large Onion
+1 large Carrots
+1 tbs Tomato Puree
+2 tsp Cumin
+1 tsp  Paprika
+1/2 tsp Mint
+1/2 tsp Thyme
+1/4 tsp Black Pepper
+1/4 tsp Red Pepper Flakes
+4 cups  Vegetable Stock
+1 cup  Water
+Pinch Sea Salt",https://www.themealdb.com/images/media/meals/58oia61564916529.jpg
+53069,Bistek,Beef,API,1.0,,"0.	Marinate beef in soy sauce, lemon (or calamansi), and ground black pepper for at least 1 hour. Note: marinate overnight for best result
+1.	Heat the cooking oil in a pan then pan-fry half of the onions until the texture becomes soft. Set aside
+2.	Drain the marinade from the beef. Set it aside. Pan-fry the beef on the same pan where the onions were fried for 1 minute per side. Remove from the pan. Set aside
+3.	Add more oil if needed. Saute garlic and remaining raw onions until onion softens.
+4.	Pour the remaining marinade and water. Bring to a boil.
+5.	Add beef. Cover the pan and simmer until the meat is tender. Note: Add water as needed.
+6.	Season with ground black pepper and salt as needed. Top with pan-fried onions.
+7.	Transfer to a serving plate. Serve hot. Share and Enjoy!
+","1 lb Beef
+5 tablespoons Soy Sauce
+1 Lemon
+3 cloves Garlic
+3 parts  Onion
+4 tbs Olive Oil
+1 cup  Water
+1 pinch Salt",https://www.themealdb.com/images/media/meals/4pqimk1683207418.jpg
+52844,Lasagne,Pasta,API,1.0,,"Heat the oil in a large saucepan. Use kitchen scissors to snip the bacon into small pieces, or use a sharp knife to chop it on a chopping board. Add the bacon to the pan and cook for just a few mins until starting to turn golden. Add the onion, celery and carrot, and cook over a medium heat for 5 mins, stirring occasionally, until softened.
+Add the garlic and cook for 1 min, then tip in the mince and cook, stirring and breaking it up with a wooden spoon, for about 6 mins until browned all over.
+Stir in the tomato purée and cook for 1 min, mixing in well with the beef and vegetables. Tip in the chopped tomatoes. Fill each can half full with water to rinse out any tomatoes left in the can, and add to the pan. Add the honey and season to taste. Simmer for 20 mins.
+Heat oven to 200C/180C fan/gas 6. To assemble the lasagne, ladle a little of the ragu sauce into the bottom of the roasting tin or casserole dish, spreading the sauce all over the base. Place 2 sheets of lasagne on top of the sauce overlapping to make it fit, then repeat with more sauce and another layer of pasta. Repeat with a further 2 layers of sauce and pasta, finishing with a layer of pasta.
+Put the crème fraîche in a bowl and mix with 2 tbsp water to loosen it and make a smooth pourable sauce. Pour this over the top of the pasta, then top with the mozzarella. Sprinkle Parmesan over the top and bake for 25–30 mins until golden and bubbling. Serve scattered with basil, if you like.","1 tblsp  Olive Oil
+2 Bacon
+1 finely chopped  Onion
+1 Stick Celery
+1 medium Carrots
+2 cloves chopped Garlic
+500g Minced Beef
+1 tbls Tomato Puree
+800g Chopped Tomatoes
+1 tblsp  Honey
+500g Lasagne Sheets
+400ml Creme Fraiche
+125g Mozzarella Balls
+50g Parmesan Cheese
+Topping Basil Leaves",https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg
+53028,Shawarma,Chicken,API,1.0,,"Combine the marinade ingredients in a large ziplock bag (or bowl).
+Add the chicken and use your hands to make sure each piece is coated. If using a ziplock bag, I find it convenient to close the bag then massage the bag to disperse the rub all over each chicken piece.
+Marinate overnight or up to 24 hours.
+Combine the Yoghurt Sauce ingredients in a bowl and mix. Cover and put in the fridge until required (it will last for 3 days in the fridge).
+Heat grill/BBQ (or large heavy based pan on stove) on medium high. You should not need to oil it because the marinade has oil in it and also thigh fillets have fat. But if you are worried then oil your hotplate/grill. (See notes for baking)
+Place chicken on the grill and cook the first side for 4 to 5 minutes until nicely charred, then turn and cook the other side for 3 to 4 minutes (the 2nd side takes less time).
+Remove chicken from the grill and cover loosely with foil. Set aside to rest for 5 minutes.
+TO SERVE
+Slice chicken and pile onto platter alongside flatbreads, Salad and the Yoghurt Sauce.
+To make a wrap, get a piece of flatbread and smear with Yoghurt Sauce. Top with a bit of lettuce and tomato and Chicken Shawarma. Roll up and enjoy!","1 kg Chicken Thighs
+1 tbs Coriander
+1 tbs Cumin
+1 tbs Cardamom
+1 tsp  Cayenne Pepper
+2 tsp Paprika
+2 tbs Lemon Juice
+3 tbs Olive Oil
+1 cup  Greek Yogurt
+1 Garlic Clove
+1 tsp  Cumin
+Splash Lemon Juice
+Sliced Lettuce
+Sliced Tomato
+6 Pita Bread",https://www.themealdb.com/images/media/meals/kcv6hj1598733479.jpg
+52802,Fish pie,Seafood,API,1.0,,"01.Put the potatoes in a large pan of cold salted water and bring to the boil. Lower the heat, cover, then simmer gently for 15 minutes until tender. Drain, then return to the pan over a low heat for 30 seconds to drive off any excess water. Mash with 1 tbsp olive oil, then season.
+02.Meanwhile put the milk in a large sauté pan, add the fish and bring to the boil. Remove from the heat, cover and stand for 3 minutes. Remove the fish (reserving the milk) and pat dry with kitchen paper, then gently flake into an ovenproof dish, discarding the skin and any bones.
+03.Heat the remaining oil in a pan, stir in the flour and cook for 30 seconds. Gradually stir in 200-250ml of the reserved milk (discard the rest). Grate in nutmeg, season, then bubble until thick. Stir in the cream.
+04.Preheat the oven to 190°C/fan170°C/gas 5. Grate the artichokes and add to the dish with the leek, prawns and herbs. Stir the lemon zest and juice into the sauce, then pour over. Mix gently with a wooden spoon.
+05.Spoon the mash onto the fish mixture, then use a fork to make peaks, which will crisp and brown as it cooks. Sprinkle over the cheese, then bake for 35-40 minutes until golden and bubbling. Serve with wilted greens.","900g Floury Potatoes
+2 tbsp Olive Oil
+600ml Semi-skimmed Milk
+800g White Fish Fillets
+1 tbsp Plain flour
+Grating Nutmeg
+3 tbsp Double Cream
+200g Jerusalem Artichokes
+1 finely sliced Leek
+200g peeled raw Prawns
+Large handful Parsley
+Handful Dill
+Grated zest of 1 Lemon
+25g grated Gruyère
+Juice of 1 Lemon",https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg
+52811,Ribollita,Vegetarian,API,1.0,,"Put 2 tablespoons of the oil in a large pot over medium heat. When it’s hot, add onion, carrot, celery and garlic; sprinkle with salt and pepper and cook, stirring occasionally, until vegetables are soft, 5 to 10 minutes.
+Heat the oven to 500 degrees. Drain the beans; if they’re canned, rinse them as well. Add them to the pot along with tomatoes and their juices and stock, rosemary and thyme. Bring to a boil, then reduce heat so the soup bubbles steadily; cover and cook, stirring once or twice to break up the tomatoes, until the flavors meld, 15 to 20 minutes.
+Fish out and discard rosemary and thyme stems, if you like, and stir in kale. Taste and adjust seasoning. Lay bread slices on top of the stew so they cover the top and overlap as little as possible. Scatter red onion slices over the top, drizzle with the remaining 3 tablespoons oil and sprinkle with Parmesan.
+Put the pot in the oven and bake until the bread, onions and cheese are browned and crisp, 10 to 15 minutes. (If your pot fits under the broiler, you can also brown the top there.) Divide the soup and bread among 4 bowls and serve.","5 tablespoons Olive Oil
+1 chopped Onion
+1 chopped Carrots
+1 stalk chopped Celery
+1 tablespoon minced Garlic
+2 cups Cannellini Beans
+1 Canned tomatoes
+4 cups Water
+1 fresh sprig Rosemary
+1 fresh sprig Thyme
+1 pound chopped Kale
+4 thick slices Wholegrain Bread
+1 thinly sliced Red Onions
+½ cup freshly grated Parmesan",https://www.themealdb.com/images/media/meals/xrrwpx1487347049.jpg
