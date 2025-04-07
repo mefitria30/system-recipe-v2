@@ -57,6 +57,16 @@
                         placeholder="Masukkan rating (0-5)"
                         value="<?= isset($_POST['rating']) ? $_POST['rating'] : '' ?>">
                 </div>
+
+                <div class="form-group col-md-6">
+                    <label for="cluster">Pilih Cluster:</label>
+                    <select class="form-control" id="cluster" name="cluster">
+                        <option value="all">Semua Cluster</option>
+                        <option value="High">Favorit</option>
+                        <option value="Low">Biasa-Biasa Saja</option>
+                    </select>
+                </div>
+
             </div>
 
             <button type="submit" class="btn btn-primary btn-block">Cari Rekomendasi</button>
@@ -72,11 +82,10 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <!-- Lazy Load Gambar Resep -->
-                        <img data-src="<?= $recipe['image'] ?>" class="lazyload card-img-top"
-                            alt="<?= $recipe['recipe_name'] ?>">
+                        <img data-src="<?= $recipe['image'] == 'assets/images/no_image_available.svg' ? '/system-recipe-v2/assets/images/no_image_available.svg' : $recipe['image'] ?>"
+                            class="lazyload card-img-top">
 
-
-                        <div class="card-body">
+                        <div class=" card-body">
                             <h5 class="card-title"><?= $recipe['recipe_name'] ?></h5>
                             <p class="card-text text-muted">
                                 <strong>Kategori:</strong> <?= $recipe['category'] ?>
@@ -84,6 +93,11 @@
                             <p class="card-text">
                                 <strong>Rating:</strong> <?= $recipe['rating'] ?>
                             </p>
+                            <p class="card-text">
+                                <strong>Cluster:</strong> <?= $recipe['cluster'] ?>
+                            </p>
+
+
                             <!-- Button Pop-Up -->
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#recipeModal<?= $index ?>">

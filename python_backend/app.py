@@ -59,9 +59,10 @@ def fetch_data_from_db():
 
     # Tambahkan path gambar default jika gambar kosong
     updated_data['image'] = updated_data['image_name'].apply(
-        lambda x: f"assets/images/recipes/{x}" if pd.notnull(x) else "assets/images/no_image_available.svg"
+        lambda x: f"/system-recipe-v2/assets/images/recipes/{x}" if pd.notnull(x) else "/system-recipe-v2/assets/images/no_image_available.svg"
     )
-    
+
+
     connection.close()
     return updated_data
 
@@ -102,18 +103,29 @@ def fetch_meal_db():
 
 # Fungsi utama untuk menghasilkan rekomendasi
 def generate_recommendations():
-    # Gabungkan data dari database dan API
-    db_data = fetch_data_from_db()
-    api_data = fetch_meal_db()
-    combined_data = pd.concat([db_data, api_data], ignore_index=True)
+    try:
+        # Gabungkan data dari database dan API
+        db_data = fetch_data_from_db()
+        api_data = fetch_meal_db()
+        combined_data = pd.concat([db_data, api_data], ignore_index=True)
 
-    # Sorting berdasarkan rating tertinggi
-    combined_data = combined_data.sort_values(by='rating', ascending=False)
+        # Hapus duplikasi berdasarkan nama resep (recipe_name)
+        combined_data = combined_data.drop_duplicates(subset=['recipe_name'], keep='last')
 
-    # Simpan hasil ke file CSV
-    combined_data.to_csv("recommendations.csv", index=False)
-    print("Data rekomendasi telah disimpan ke 'recommendations.csv'")
+        # Tambahkan kolom cluster berdasarkan threshold rating
+        combined_data['cluster'] = combined_data['rating'].apply(
+            lambda x: 'High' if x >= 4 else 'Low' if pd.notnull(x) else 'Low'
+        )
 
+        # Sorting berdasarkan rating tertinggi
+        combined_data = combined_data.sort_values(by='rating', ascending=False, na_position='last')
+
+        # Simpan hasil ke file CSV
+        combined_data.to_csv("recommendations.csv", index=False)
+        print("Data rekomendasi tanpa duplikasi telah disimpan ke 'recommendations.csv'")
+
+    except Exception as e:
+        print(f"Terjadi kesalahan: {e}")
 
 # Eksekusi script
 if __name__ == "__main__":

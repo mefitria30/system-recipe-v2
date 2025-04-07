@@ -16,8 +16,8 @@ class Recipe_model extends CI_Model {
 
         foreach ($recipes as &$recipe) {
             $recipe['image'] = !empty($recipe['image_name']) 
-                ? base_url('assets/images/recipes/' . $recipe['image_name']) 
-                : base_url('assets/images/no_image_available.svg');
+                ? '/system-recipe-v2/assets/images/recipes/' . $recipe['image_name'] 
+                : '/system-recipe-v2/assets/images/no_image_available.svg';
             $recipe['ingredients'] = !empty($recipe['ingredients']) 
                 ? explode("\n", $recipe['ingredients']) 
                 : ['Bahan tidak tersedia'];
@@ -77,10 +77,8 @@ class Recipe_model extends CI_Model {
 
     
     public function get_combined_data() {
-        $local_recipes = $this->get_all_recipes(); // Data lokal
-        $api_recipes = $this->fetch_meal_db();    // Data API (atau kosong jika offline)
-
-        $file = fopen('python_backend/recommendations.csv', 'r');
+        $api_recipes = $this->fetch_meal_db();    // Data API
+        $file = fopen('python_backend/recommendations.csv', 'r'); // Data CSV
         $csv_recipes = [];
         $header = fgetcsv($file);
         while (($data = fgetcsv($file)) !== FALSE) {
@@ -88,18 +86,37 @@ class Recipe_model extends CI_Model {
         }
         fclose($file);
 
-        $combined_data = array_merge($api_recipes, $local_recipes, $csv_recipes);
+        $local_recipes = $this->get_all_recipes(); // Data lokal
 
-        $unique_data = [];
-        foreach ($combined_data as $recipe) {
-            $unique_key = $recipe['recipe_name'];
-            if (!isset($unique_data[$unique_key])) {
-                $unique_data[$unique_key] = $recipe;
+        // Gabungkan data sesuai prioritas: API -> CSV -> Lokal
+        $combined_data = array_merge($api_recipes, $csv_recipes, $local_recipes);
+
+        // Tetapkan cluster secara dinamis jika cluster tidak ada
+        foreach ($combined_data as &$recipe) {
+            if (!isset($recipe['cluster']) || empty($recipe['cluster'])) {
+                if (isset($recipe['rating']) && is_numeric($recipe['rating'])) {
+                    $recipe['cluster'] = $recipe['rating'] >= 4 ? 'High' : 'Low';
+                } else {
+                    $recipe['cluster'] = 'Low'; // Tetapkan sebagai "Low" jika rating tidak tersedia
+                }
             }
         }
 
-        return array_values($unique_data);
+        // Hapus duplikasi berdasarkan nama resep (recipe_name)
+        $unique_data = [];
+        foreach ($combined_data as $recipe) {
+            $unique_key = strtolower(trim($recipe['recipe_name'])); // Normalisasi nama jadi lowercase tanpa spasi ekstra
+            if (!isset($unique_data[$unique_key])) {
+                $unique_data[$unique_key] = $recipe; // Ambil data pertama sesuai prioritas
+            }
+        }
+
+        return array_values($unique_data); // Kembalikan data tanpa duplikasi
     }
+
+
+
+
 
     public function get_all_categories() {
         // Ambil kategori dari database

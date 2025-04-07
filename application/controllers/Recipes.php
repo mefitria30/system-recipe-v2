@@ -17,30 +17,33 @@ class Recipes extends CI_Controller {
 
 
     public function process() {
-        $this->load->model('Recipe_model'); // Load model Recipe_model
+        $this->load->model('Recipe_model');
 
         // Ambil input pengguna
-        $category = $this->input->post('category'); // Kategori
-        $min_rating = $this->input->post('rating'); // Rating minimal
+        $category = $this->input->post('category');
+        $min_rating = $this->input->post('rating');
+        $cluster = $this->input->post('cluster'); // Ambil input cluster
 
         // Ambil semua data resep gabungan
         $recipes = $this->Recipe_model->get_combined_data();
 
-        // Filter data berdasarkan preferensi pengguna
-        $filtered_recipes = array_filter($recipes, function($recipe) use ($category, $min_rating) {
+        // Filter data berdasarkan kategori, rating, dan cluster
+        $filtered_recipes = array_filter($recipes, function($recipe) use ($category, $min_rating, $cluster) {
             $is_category_match = $category == 'all' || $recipe['category'] == $category;
             $is_rating_match = isset($recipe['rating']) && $recipe['rating'] >= $min_rating;
-            return $is_category_match && $is_rating_match;
+            $is_cluster_match = $cluster == 'all' || $recipe['cluster'] == $cluster;
+            return $is_category_match && $is_rating_match && $is_cluster_match;
         });
 
         // Ambil daftar kategori untuk dropdown
         $categories = $this->Recipe_model->get_all_categories();
 
         // Kirim data hasil filter ke view
-        $data['recipes'] = $filtered_recipes; // Data yang difilter
-        $data['categories'] = $categories; // Dropdown kategori
+        $data['recipes'] = $filtered_recipes;
+        $data['categories'] = $categories;
         $this->load->view('recipes_view', $data);
     }
+
 
     public function update_recommendations() {
         $output = [];
