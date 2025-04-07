@@ -1,8 +1,6 @@
 import pymysql
 import pandas as pd
 import numpy as np
-from sklearn.cluster import KMeans
-from numpy.linalg import svd
 import requests
 
 # Fungsi untuk mengambil data dari database MySQL
