@@ -3,6 +3,10 @@ import pandas as pd
 import numpy as np
 import requests
 
+from sklearn.naive_bayes import GaussianNB
+from sklearn.model_selection import train_test_split
+
+
 # Fungsi untuk mengambil data dari database MySQL
 def fetch_data_from_db():
     connection = pymysql.connect(
@@ -62,6 +66,10 @@ def fetch_data_from_db():
         lambda x: f"/system-recipe-v2/assets/images/recipes/{x}" if pd.notnull(x) else "/system-recipe-v2/assets/images/no_image_available.svg"
     )
 
+    # Tambahkan kolom cluster secara default
+    updated_data['cluster'] = updated_data['rating'].apply(
+        lambda x: 'High' if x >= 4 else 'Low' if pd.notnull(x) else 'Low'
+    )
 
     connection.close()
     return updated_data
@@ -95,10 +103,54 @@ def fetch_meal_db():
                 "rating": round(np.random.uniform(1.0, 5.0)),  # Rating dibulatkan
                 "description": meal['strInstructions'] if meal['strInstructions'] else 'Deskripsi tidak tersedia.',
                 "ingredients": ingredients_string,
-                "image": meal['strMealThumb'] if meal['strMealThumb'] else "assets/images/no_image_available.svg"
+                "image": meal['strMealThumb'] if meal['strMealThumb'] else "assets/images/no_image_available.svg",
+                "cluster": 'High' if round(np.random.uniform(1.0, 5.0)) >= 4 else 'Low'
             })
         return pd.DataFrame(api_data)
     return pd.DataFrame()
+
+
+# Fungsi untuk melatih model Naive Bayes
+def train_naive_bayes(data):
+    # Periksa apakah kolom 'cluster' ada
+    if 'cluster' not in data.columns or data['cluster'].isnull().all():
+        raise ValueError("Data tidak memiliki kolom 'cluster' untuk pelatihan Naive Bayes.")
+    
+    # Mapping cluster ke angka
+    data['cluster_numeric'] = data['cluster'].map({'High': 1, 'Low': 0})
+
+    # Ambil fitur dan label
+    X = data[['rating']]  # Fitur rating
+    y = data['cluster_numeric']  # Label cluster
+
+    # Split data untuk training dan testing
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    # Latih model Naive Bayes
+    model = GaussianNB()
+    model.fit(X_train, y_train)
+
+    return model
+
+
+# Fungsi untuk memprediksi cluster menggunakan model Naive Bayes
+def predict_clusters(data, model):
+    # Prediksi cluster
+    predictions = model.predict(data[['rating']])
+    # Mapping kembali ke label
+    data['predicted_cluster'] = predictions
+    data['cluster'] = data['predicted_cluster'].map({1: 'High', 0: 'Low'})
+
+    return data
+
+
+# Fallback threshold jika Naive Bayes gagal
+def fallback_threshold(data):
+    # Fallback menggunakan threshold statis jika model gagal
+    data['cluster'] = data['rating'].apply(
+        lambda x: 'High' if x >= 4 else 'Low'
+    )
+    return data
 
 
 # Fungsi utama untuk menghasilkan rekomendasi
@@ -112,20 +164,25 @@ def generate_recommendations():
         # Hapus duplikasi berdasarkan nama resep (recipe_name)
         combined_data = combined_data.drop_duplicates(subset=['recipe_name'], keep='last')
 
-        # Tambahkan kolom cluster berdasarkan threshold rating
-        combined_data['cluster'] = combined_data['rating'].apply(
-            lambda x: 'High' if x >= 4 else 'Low' if pd.notnull(x) else 'Low'
-        )
+        try:
+            # Coba latih dan prediksi dengan Naive Bayes
+            model = train_naive_bayes(combined_data)  # Latih model
+            combined_data = predict_clusters(combined_data, model)  # Prediksi
+        except Exception as e:
+            # Jika Naive Bayes gagal, gunakan fallback threshold
+            print(f"Model Naive Bayes gagal, menggunakan fallback threshold. Error: {e}")
+            combined_data = fallback_threshold(combined_data)
 
         # Sorting berdasarkan rating tertinggi
         combined_data = combined_data.sort_values(by='rating', ascending=False, na_position='last')
 
         # Simpan hasil ke file CSV
         combined_data.to_csv("recommendations.csv", index=False)
-        print("Data rekomendasi tanpa duplikasi telah disimpan ke 'recommendations.csv'")
+        print("Data rekomendasi telah disimpan ke 'recommendations.csv'")
 
     except Exception as e:
         print(f"Terjadi kesalahan: {e}")
+
 
 # Eksekusi script
 if __name__ == "__main__":
