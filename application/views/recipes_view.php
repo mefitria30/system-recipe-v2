@@ -61,9 +61,23 @@
                 <div class="form-group col-md-6">
                     <label for="cluster">Pilih Cluster:</label>
                     <select class="form-control" id="cluster" name="cluster">
-                        <option value="all">Semua Cluster</option>
+                        <!-- <option value="all"></option>
                         <option value="High">Favorit</option>
-                        <option value="Low">Biasa-Biasa Saja</option>
+                        <option value="Low">Biasa-Biasa Saja</option> -->
+
+                        <option value="all"
+                            <?= isset($_POST['cluster']) && $_POST['cluster'] == 'all' ? 'selected' : '' ?>>Semua
+                            Cluster
+                        </option>
+
+                        <option value="High"
+                            <?= isset($_POST['cluster']) && $_POST['cluster'] == 'High' ? 'selected' : '' ?>>Favorit
+                        </option>
+
+                        <option value="Low"
+                            <?= isset($_POST['cluster']) && $_POST['cluster'] == 'Low' ? 'selected' : '' ?>>Biasa-Biasa
+                            Saja
+                        </option>
                     </select>
                 </div>
 
