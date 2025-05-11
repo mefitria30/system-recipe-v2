@@ -28,11 +28,20 @@
                                         <strong>Rating:</strong> <?= $recipe['rating'] ?>
                                     </p>
                                     <p class="mb-0">
-                                        <strong>Cluster:</strong> <?= $recipe['cluster'] ?>
+                                        <strong>Cluster:</strong>
+                                        <?php
+                                        if ($recipe['cluster'] == "Low") {
+                                            echo "Biasa-biasa saja";
+                                        } elseif ($recipe['cluster'] == "High") {
+                                            echo "Favorit!";
+                                        } else {
+                                            echo "-";
+                                        }
+                                        ?>
                                     </p>
 
                                     <!-- Button Pop-Up -->
-                                    <button type="button" class="btn btn-primary px-5 py-3 rounded-pill"
+                                    <button type="button" class="btn btn-primary px-5 py-3 rounded-pill mt-3"
                                         data-toggle="modal" data-target="#recipeModal<?= $index ?>">
                                         Lihat Resep
                                     </button>
@@ -47,7 +56,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <div class="text-center">
-                                            <h1 class="display-5 mb-5">Rekomendasi
+                                            <h1 class="display-5">Rekomendasi
                                                 Resep</h1>
                                         </div>
                                     </div>
