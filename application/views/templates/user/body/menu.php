@@ -69,6 +69,17 @@
                                                 <div class="ps-3 my-auto">
                                                     <h4 class="mb-0"><?= $recipe['recipe_name'] ?></h4>
                                                     <p class="m-0">Kategori: <b><?= $recipe['category'] ?></b></p>
+                                                    <p class="m-0">Cluster: <b>
+                                                            <?php
+                                                            if ($recipe['cluster'] == "Low") {
+                                                                echo "Biasa-biasa saja";
+                                                            } elseif ($recipe['cluster'] == "High") {
+                                                                echo "Favorit!";
+                                                            } else {
+                                                                echo "-";
+                                                            }
+                                                            ?>
+                                                        </b></p>
                                                 </div>
                                             </div>
                                             <div class="testimonial-content">
