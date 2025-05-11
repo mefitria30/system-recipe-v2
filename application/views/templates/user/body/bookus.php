@@ -1,6 +1,20 @@
     <!-- Book Us Start -->
     <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
         <div class="container">
+            <!-- Tambahkan Alert untuk Feedback -->
+            <?php if ($this->session->flashdata('success')): ?>
+            <div class="alert alert-success"><?= $this->session->flashdata('success') ?></div>
+            <?php elseif ($this->session->flashdata('error')): ?>
+            <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>
+            <?php endif; ?>
+
+            <div class="text-right mb-4">
+                <!-- Tombol Update -->
+                <a href="/system-recipe-v2/recipes/update" class="btn btn-primary">
+                    Update Rekomendasi
+                </a>
+            </div>
+
             <div class="row g-0">
                 <div class="col-1">
                     <img src="<?= base_url('assets/user/')?>img/background-site.jpg"

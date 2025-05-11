@@ -75,17 +75,17 @@
                                                     <div class="col-4">
                                                         <div class="list-group" id="list-tab" role="tablist">
                                                             <a class="list-group-item list-group-item-action active"
-                                                                id="list-home-list-<?= $recipe['id'] ?>"
+                                                                id="list-home-list-<?= $recipe['recipe_name'] ?>"
                                                                 data-toggle="list"
-                                                                href="#list-home-<?= $recipe['id'] ?>" role="tab"
-                                                                aria-controls="home">
+                                                                href="#list-home-<?= $recipe['recipe_name'] ?>"
+                                                                role="tab" aria-controls="home">
                                                                 <h6>Bahan Bahan</h6>
                                                             </a>
                                                             <a class="list-group-item list-group-item-action"
-                                                                id="list-profile-list-<?= $recipe['id'] ?>"
+                                                                id="list-profile-list-<?= $recipe['recipe_name'] ?>"
                                                                 data-toggle="list"
-                                                                href="#list-profile-<?= $recipe['id'] ?>" role="tab"
-                                                                aria-controls="profile">
+                                                                href="#list-profile-<?= $recipe['recipe_name'] ?>"
+                                                                role="tab" aria-controls="profile">
                                                                 <h6>Cara Membuat</h6>
                                                             </a>
                                                         </div>
@@ -93,8 +93,9 @@
                                                     <div class="col-8">
                                                         <div class="tab-content" id="nav-tabContent">
                                                             <div class="tab-pane fade show active"
-                                                                id="list-home-<?= $recipe['id'] ?>" role="tabpanel"
-                                                                aria-labelledby="list-home-list-<?= $recipe['id'] ?>">
+                                                                id="list-home-<?= $recipe['recipe_name'] ?>"
+                                                                role="tabpanel"
+                                                                aria-labelledby="list-home-list-<?= $recipe['recipe_name'] ?>">
                                                                 <ul>
                                                                     <?php if (!empty($recipe['ingredients']) && is_array($recipe['ingredients'])): ?>
                                                                     <?php foreach ($recipe['ingredients'] as $ingredient): ?>
@@ -114,8 +115,9 @@
                                                                 </ul>
                                                             </div>
                                                             <div class="tab-pane fade"
-                                                                id="list-profile-<?= $recipe['id'] ?>" role="tabpanel"
-                                                                aria-labelledby="list-profile-list-<?= $recipe['id'] ?>">
+                                                                id="list-profile-<?= $recipe['recipe_name'] ?>"
+                                                                role="tabpanel"
+                                                                aria-labelledby="list-profile-list-<?= $recipe['recipe_name'] ?>">
                                                                 <ol>
                                                                     <?php 
                                                                     if (!empty($recipe['description'])) {
