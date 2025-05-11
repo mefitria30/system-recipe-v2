@@ -12,7 +12,24 @@ class Recipes extends CI_Controller {
         // Kirim data ke view
         $data['recipes'] = $recipes;
         $data['categories'] = $categories;
-        $this->load->view('recipes_view', $data);
+        // $this->load->view('recipes_view', $data);
+
+        $this->load->view('templates/user/header', $data);
+        // $this->load->view('templates/user/body/spinner', $data);
+        // $this->load->view('templates/user/body/navbar', $data);
+        // $this->load->view('templates/user/body/modal_search_start', $data);
+        // $this->load->view('templates/user/body/hero', $data);
+        // $this->load->view('templates/user/body/about', $data);
+        // $this->load->view('templates/user/body/fact', $data);
+        // $this->load->view('templates/user/body/service', $data);
+        $this->load->view('templates/user/body/bookus', $data);
+        // $this->load->view('templates/user/body/events', $data);
+        $this->load->view('templates/user/body/menu', $data);
+        // $this->load->view('templates/user/body/team', $data);
+        // $this->load->view('templates/user/body/testimonial', $data);
+        // $this->load->view('templates/user/body/blog', $data);
+        // $this->load->view('user_app/index', $data);
+        $this->load->view('templates/user/footer', $data);
     }
 
 
@@ -41,7 +58,24 @@ class Recipes extends CI_Controller {
         // Kirim data hasil filter ke view
         $data['recipes'] = $filtered_recipes;
         $data['categories'] = $categories;
-        $this->load->view('recipes_view', $data);
+        // $this->load->view('recipes_view', $data);
+
+        $this->load->view('templates/user/header', $data);
+        // $this->load->view('templates/user/body/spinner', $data);
+        // $this->load->view('templates/user/body/navbar', $data);
+        // $this->load->view('templates/user/body/modal_search_start', $data);
+        // $this->load->view('templates/user/body/hero', $data);
+        // $this->load->view('templates/user/body/about', $data);
+        // $this->load->view('templates/user/body/fact', $data);
+        // $this->load->view('templates/user/body/service', $data);
+        $this->load->view('templates/user/body/bookus', $data);
+        // $this->load->view('templates/user/body/events', $data);
+        $this->load->view('templates/user/body/menu', $data);
+        // $this->load->view('templates/user/body/team', $data);
+        // $this->load->view('templates/user/body/testimonial', $data);
+        // $this->load->view('templates/user/body/blog', $data);
+        // $this->load->view('user_app/index', $data);
+        $this->load->view('templates/user/footer', $data);
     }
 
 
